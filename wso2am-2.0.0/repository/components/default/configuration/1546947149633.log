@@ -1,0 +1,1626 @@
+!SESSION 2019-01-08 12:32:37.875 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+
+This is a continuation of log file /Library/WSO2/wso2am-2.0.0/repository/components/default/configuration/1546947149633.bak_0.log
+Created Time: 2019-01-08 12:32:37.875
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:37.875
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@1d01e657 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent.activate(UserStoreMgtDSComponent.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent.activate(UserStoreMgtDSComponent.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:37.884
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:37.884
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:37.885
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@5a05217c of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:37.885
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@5a05217c of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.095
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.096
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.102
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@75908549 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.102
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@75908549 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.105
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.105
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.105
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@1a768ac9 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.106
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@1a768ac9 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.user.mgt.internal.UserMgtDSComponent.activate(UserMgtDSComponent.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.117
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.118
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.118
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@1319fde9 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.119
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@1319fde9 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.120
+!MESSAGE Could not bind a reference of component org.wso2.carbon.context.internal.CarbonContextDiscoveryServiceComponent. The reference is: Reference[name = discoveryService, interface = org.wso2.carbon.base.DiscoveryService, policy = dynamic, cardinality = 0..1, target = null, bind = setDiscoveryService, unbind = unsetDiscoveryService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.120
+!MESSAGE Could not bind a reference of component org.wso2.carbon.context.internal.CarbonContextDiscoveryServiceComponent. The reference is: Reference[name = discoveryService, interface = org.wso2.carbon.base.DiscoveryService, policy = dynamic, cardinality = 0..1, target = null, bind = setDiscoveryService, unbind = unsetDiscoveryService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.123
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.123
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.123
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@69f0fd2d of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.context.internal.CarbonContextServiceComponent.activate(CarbonContextServiceComponent.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.context.internal.CarbonContextServiceComponent.activate(CarbonContextServiceComponent.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.124
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@69f0fd2d of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.context.internal.CarbonContextServiceComponent.activate(CarbonContextServiceComponent.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.context.internal.CarbonContextServiceComponent.activate(CarbonContextServiceComponent.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.133
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.133
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.134
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@23ee925e of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.134
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@23ee925e of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.138
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.139
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.139
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@4d87a7a of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.webapp.deployer.internal.WebAppDeployerServiceComponent.activate(WebAppDeployerServiceComponent.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.webapp.deployer.internal.WebAppDeployerServiceComponent.activate(WebAppDeployerServiceComponent.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.140
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@4d87a7a of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.webapp.deployer.internal.WebAppDeployerServiceComponent.activate(WebAppDeployerServiceComponent.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 36 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at org.wso2.carbon.webapp.deployer.internal.WebAppDeployerServiceComponent.activate(WebAppDeployerServiceComponent.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.152
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.152
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.153
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@47e3c82b of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.154
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@47e3c82b of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.155
+!MESSAGE Could not bind a reference of component org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent. The reference is: Reference[name = url.mapper.service, interface = org.wso2.carbon.url.mapper.HotUpdateService, policy = dynamic, cardinality = 0..1, target = null, bind = setHotUpdateService, unbind = unsetHotUpdateService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.155
+!MESSAGE Could not bind a reference of component org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent. The reference is: Reference[name = url.mapper.service, interface = org.wso2.carbon.url.mapper.HotUpdateService, policy = dynamic, cardinality = 0..1, target = null, bind = setHotUpdateService, unbind = unsetHotUpdateService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.155
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent@1bdc6e30 of component org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent  
+!STACK 0
+java.lang.NoClassDefFoundError: org/wso2/carbon/url/mapper/HotUpdateService
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethod(Class.java:2128)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.getMethod(ServiceComponent.java:156)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:253)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.ClassNotFoundException: org.wso2.carbon.url.mapper.HotUpdateService cannot be found by org.wso2.carbon.webapp.mgt_4.7.0
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 15 more
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.156
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent@1bdc6e30 of component org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent  
+!STACK 0
+java.lang.NoClassDefFoundError: org/wso2/carbon/url/mapper/HotUpdateService
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethod(Class.java:2128)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.getMethod(ServiceComponent.java:156)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:253)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.ClassNotFoundException: org.wso2.carbon.url.mapper.HotUpdateService cannot be found by org.wso2.carbon.webapp.mgt_4.7.0
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 15 more
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.214
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.214
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.216
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@72de4012 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.217
+!MESSAGE [SCR] Exception while activating instance org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent@72de4012 of component identity.oauth.component  
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+Caused by: java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.core.util.IdentityUtil.fillURLPlaceholders(IdentityUtil.java:677)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.parseOAuthURLs(OAuthServerConfiguration.java:985)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.buildOAuthServerConfiguration(OAuthServerConfiguration.java:209)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.<init>(OAuthServerConfiguration.java:165)
+	at org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration.getInstance(OAuthServerConfiguration.java:173)
+	at org.wso2.carbon.identity.oauth.internal.OAuthServiceComponent.activate(OAuthServiceComponent.java:56)
+	at sun.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at org.eclipse.equinox.internal.util.impl.tpt.threadpool.Executor.run(Executor.java:70)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.217
+!MESSAGE Could not bind a reference of component org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent. The reference is: Reference[name = url.mapper.service, interface = org.wso2.carbon.url.mapper.HotUpdateService, policy = dynamic, cardinality = 0..1, target = null, bind = setHotUpdateService, unbind = unsetHotUpdateService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.217
+!MESSAGE Could not bind a reference of component org.wso2.carbon.webapp.mgt.internal.UrlMapperServiceComponent. The reference is: Reference[name = url.mapper.service, interface = org.wso2.carbon.url.mapper.HotUpdateService, policy = dynamic, cardinality = 0..1, target = null, bind = setHotUpdateService, unbind = unsetHotUpdateService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.218
+!MESSAGE Could not bind a reference of component throttle.core.services. The reference is: Reference[name = hazelcast.instance.service, interface = com.hazelcast.core.HazelcastInstance, policy = dynamic, cardinality = 0..1, target = null, bind = setHazelcastInstance, unbind = unsetHazelcastInstance]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:38.218
+!MESSAGE Could not bind a reference of component throttle.core.services. The reference is: Reference[name = hazelcast.instance.service, interface = com.hazelcast.core.HazelcastInstance, policy = dynamic, cardinality = 0..1, target = null, bind = setHazelcastInstance, unbind = unsetHazelcastInstance]
+
+!ENTRY json-schema-validator-all 4 0 2019-01-08 12:32:38.406
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "json-schema-validator-all_2.2.6.wso2v1 [104]" could not be resolved. Reason: Missing Constraint: Import-Package: com.google.common.base; version="[15.0.0,16.0.0)"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1332)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1316)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.setBundleSL(StartLevelManager.java:670)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:435)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.153
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverShutdownHandler, interface = org.wso2.carbon.core.ServerShutdownHandler, policy = dynamic, cardinality = 0..n, target = null, bind = addServerShutdownHandler, unbind = removeServerShutdownHandler]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.153
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverShutdownHandler, interface = org.wso2.carbon.core.ServerShutdownHandler, policy = dynamic, cardinality = 0..n, target = null, bind = addServerShutdownHandler, unbind = removeServerShutdownHandler]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.158
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverRestartHandler, interface = org.wso2.carbon.core.ServerRestartHandler, policy = dynamic, cardinality = 0..n, target = null, bind = addServerRestartHandler, unbind = removeServerRestartHandler]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.159
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverRestartHandler, interface = org.wso2.carbon.core.ServerRestartHandler, policy = dynamic, cardinality = 0..n, target = null, bind = addServerRestartHandler, unbind = removeServerRestartHandler]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.159
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverStartupHandler, interface = org.wso2.carbon.core.ServerStartupHandler, policy = dynamic, cardinality = 0..n, target = null, bind = addServerStartupHandler, unbind = removeServerStartupHandler]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.159
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverStartupHandler, interface = org.wso2.carbon.core.ServerStartupHandler, policy = dynamic, cardinality = 0..n, target = null, bind = addServerStartupHandler, unbind = removeServerStartupHandler]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.159
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = coordinatedActivity, interface = org.wso2.carbon.core.clustering.api.CoordinatedActivity, policy = dynamic, cardinality = 0..n, target = null, bind = addCoordinatedActivity, unbind = removeCoordinatedActivity]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.159
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = coordinatedActivity, interface = org.wso2.carbon.core.clustering.api.CoordinatedActivity, policy = dynamic, cardinality = 0..n, target = null, bind = addCoordinatedActivity, unbind = removeCoordinatedActivity]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.160
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverStartupObserver, interface = org.wso2.carbon.core.ServerStartupObserver, policy = dynamic, cardinality = 0..n, target = null, bind = addServerStartupObserver, unbind = removeServerStartupObserver]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:43.160
+!MESSAGE Could not bind a reference of component carbon.core.dscomponent. The reference is: Reference[name = serverStartupObserver, interface = org.wso2.carbon.core.ServerStartupObserver, policy = dynamic, cardinality = 0..n, target = null, bind = addServerStartupObserver, unbind = removeServerStartupObserver]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:45.818
+!MESSAGE Could not bind a reference of component org.wso2.apimgt.impl.services. The reference is: Reference[name = listener.manager.service, interface = org.apache.axis2.engine.ListenerManager, policy = dynamic, cardinality = 0..1, target = null, bind = setListenerManager, unbind = unsetListenerManager]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:45.818
+!MESSAGE Could not bind a reference of component org.wso2.apimgt.impl.services. The reference is: Reference[name = listener.manager.service, interface = org.apache.axis2.engine.ListenerManager, policy = dynamic, cardinality = 0..1, target = null, bind = setListenerManager, unbind = unsetListenerManager]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.080
+!MESSAGE Could not bind a reference of component org.wso2.carbon.deployment.synchronizer.XXX. The reference is: Reference[name = repository.reference.service, interface = org.wso2.carbon.deployment.synchronizer.ArtifactRepository, policy = dynamic, cardinality = 0..n, target = null, bind = addArtifactRepository, unbind = removeArtifactRepository]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.080
+!MESSAGE Could not bind a reference of component org.wso2.carbon.deployment.synchronizer.XXX. The reference is: Reference[name = repository.reference.service, interface = org.wso2.carbon.deployment.synchronizer.ArtifactRepository, policy = dynamic, cardinality = 0..n, target = null, bind = addArtifactRepository, unbind = removeArtifactRepository]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.117
+!MESSAGE Could not bind a reference of component org.wso2.carbon.usage.agent. The reference is: Reference[name = org.wso2.carbon.statistics.services, interface = org.wso2.carbon.statistics.services.SystemStatisticsUtil, policy = dynamic, cardinality = 0..1, target = null, bind = setSystemStatisticsUtil, unbind = unsetSystemStatisticsUtil]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.117
+!MESSAGE Could not bind a reference of component org.wso2.carbon.usage.agent. The reference is: Reference[name = org.wso2.carbon.statistics.services, interface = org.wso2.carbon.statistics.services.SystemStatisticsUtil, policy = dynamic, cardinality = 0..1, target = null, bind = setSystemStatisticsUtil, unbind = unsetSystemStatisticsUtil]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.257
+!MESSAGE Could not bind a reference of component identity.application.management.component. The reference is: Reference[name = application.mgt.authenticator, interface = org.wso2.carbon.identity.application.mgt.AbstractInboundAuthenticatorConfig, policy = dynamic, cardinality = 0..n, target = null, bind = setInboundAuthenticatorConfig, unbind = unsetInboundAuthenticatorConfig]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.257
+!MESSAGE Could not bind a reference of component identity.application.management.component. The reference is: Reference[name = application.mgt.authenticator, interface = org.wso2.carbon.identity.application.mgt.AbstractInboundAuthenticatorConfig, policy = dynamic, cardinality = 0..n, target = null, bind = setInboundAuthenticatorConfig, unbind = unsetInboundAuthenticatorConfig]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.306
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.processor, interface = org.wso2.carbon.identity.application.authentication.framework.inbound.IdentityProcessor, policy = dynamic, cardinality = 0..n, target = null, bind = addIdentityProcessor, unbind = removeIdentityProcessor]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.306
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.processor, interface = org.wso2.carbon.identity.application.authentication.framework.inbound.IdentityProcessor, policy = dynamic, cardinality = 0..n, target = null, bind = addIdentityProcessor, unbind = removeIdentityProcessor]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.308
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.request.factory, interface = org.wso2.carbon.identity.application.authentication.framework.inbound.HttpIdentityRequestFactory, policy = dynamic, cardinality = 0..n, target = null, bind = addHttpIdentityRequestFactory, unbind = removeHttpIdentityRequestFactory]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.308
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.request.factory, interface = org.wso2.carbon.identity.application.authentication.framework.inbound.HttpIdentityRequestFactory, policy = dynamic, cardinality = 0..n, target = null, bind = addHttpIdentityRequestFactory, unbind = removeHttpIdentityRequestFactory]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.308
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.response.factory, interface = org.wso2.carbon.identity.application.authentication.framework.inbound.HttpIdentityResponseFactory, policy = dynamic, cardinality = 0..n, target = null, bind = addHttpIdentityResponseFactory, unbind = removeHttpIdentityResponseFactory]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.308
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.response.factory, interface = org.wso2.carbon.identity.application.authentication.framework.inbound.HttpIdentityResponseFactory, policy = dynamic, cardinality = 0..n, target = null, bind = addHttpIdentityResponseFactory, unbind = removeHttpIdentityResponseFactory]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.309
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.authentication.data.publisher, interface = org.wso2.carbon.identity.application.authentication.framework.AuthenticationDataPublisher, policy = dynamic, cardinality = 0..n, target = null, bind = setAuthenticationDataPublisher, unbind = unsetAuthenticationDataPublisher]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.309
+!MESSAGE Could not bind a reference of component identity.application.authentication.framework.component. The reference is: Reference[name = identity.authentication.data.publisher, interface = org.wso2.carbon.identity.application.authentication.framework.AuthenticationDataPublisher, policy = dynamic, cardinality = 0..n, target = null, bind = setAuthenticationDataPublisher, unbind = unsetAuthenticationDataPublisher]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.378
+!MESSAGE Could not bind a reference of component identity.provider.component. The reference is: Reference[name = identity.attribute.service, interface = org.wso2.carbon.identity.provider.IdentityAttributeService, policy = dynamic, cardinality = 0..n, target = null, bind = addAttributeService, unbind = removeAttributeService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.378
+!MESSAGE Could not bind a reference of component identity.provider.component. The reference is: Reference[name = identity.attribute.service, interface = org.wso2.carbon.identity.provider.IdentityAttributeService, policy = dynamic, cardinality = 0..n, target = null, bind = addAttributeService, unbind = removeAttributeService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.431
+!MESSAGE Could not bind a reference of component esb.core.initializer. The reference is: Reference[name = esbntask.taskservice, interface = org.wso2.carbon.mediation.ntask.internal.NtaskService, policy = dynamic, cardinality = 0..1, target = null, bind = setTaskService, unbind = unsetTaskService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:32:46.432
+!MESSAGE Could not bind a reference of component esb.core.initializer. The reference is: Reference[name = esbntask.taskservice, interface = org.wso2.carbon.mediation.ntask.internal.NtaskService, policy = dynamic, cardinality = 0..1, target = null, bind = setTaskService, unbind = unsetTaskService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:02.508
+!MESSAGE Could not bind a reference of component org.wso2.carbon.andes.internal.QpidServiceComponent. The reference is: Reference[name = hazelcast.instance.service, interface = com.hazelcast.core.HazelcastInstance, policy = dynamic, cardinality = 0..1, target = null, bind = setHazelcastInstance, unbind = unsetHazelcastInstance]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:02.508
+!MESSAGE Could not bind a reference of component org.wso2.carbon.andes.internal.QpidServiceComponent. The reference is: Reference[name = hazelcast.instance.service, interface = com.hazelcast.core.HazelcastInstance, policy = dynamic, cardinality = 0..1, target = null, bind = setHazelcastInstance, unbind = unsetHazelcastInstance]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.206
+!MESSAGE Could not bind a reference of component org.wso2.carbon.tenant.mgt. The reference is: Reference[name = default.tenant.billing.service, interface = org.wso2.carbon.stratos.common.TenantBillingService, policy = dynamic, cardinality = 0..1, target = null, bind = setTenantBillingService, unbind = unsetTenantBillingService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.207
+!MESSAGE Could not bind a reference of component org.wso2.carbon.tenant.mgt. The reference is: Reference[name = default.tenant.billing.service, interface = org.wso2.carbon.stratos.common.TenantBillingService, policy = dynamic, cardinality = 0..1, target = null, bind = setTenantBillingService, unbind = unsetTenantBillingService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.780
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.eventing. The reference is: Reference[name = registry.events.jmx.service, interface = org.wso2.carbon.registry.extensions.jmx.Events, policy = dynamic, cardinality = 0..1, target = null, bind = setEvents, unbind = unsetEvents]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.781
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.eventing. The reference is: Reference[name = registry.events.jmx.service, interface = org.wso2.carbon.registry.extensions.jmx.Events, policy = dynamic, cardinality = 0..1, target = null, bind = setEvents, unbind = unsetEvents]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.839
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.info. The reference is: Reference[name = registry.subscription.email.verification.service, interface = org.wso2.carbon.registry.eventing.services.SubscriptionEmailVerficationService, policy = dynamic, cardinality = 0..1, target = null, bind = setSubscriptionEmailVerficationService, unbind = unsetSubscriptionEmailVerficationService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.839
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.info. The reference is: Reference[name = registry.subscription.email.verification.service, interface = org.wso2.carbon.registry.eventing.services.SubscriptionEmailVerficationService, policy = dynamic, cardinality = 0..1, target = null, bind = setSubscriptionEmailVerficationService, unbind = unsetSubscriptionEmailVerficationService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.841
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.info. The reference is: Reference[name = registry.subscriptions.jmx.service, interface = org.wso2.carbon.registry.extensions.jmx.Subscriptions, policy = dynamic, cardinality = 0..1, target = null, bind = setSubscriptions, unbind = unsetSubscriptions]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.841
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.info. The reference is: Reference[name = registry.subscriptions.jmx.service, interface = org.wso2.carbon.registry.extensions.jmx.Subscriptions, policy = dynamic, cardinality = 0..1, target = null, bind = setSubscriptions, unbind = unsetSubscriptions]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.908
+!MESSAGE Could not bind a reference of component core.ui.dscomponent. The reference is: Reference[name = ui.authentication.extender, interface = org.wso2.carbon.ui.UIAuthenticationExtender, policy = dynamic, cardinality = 0..1, target = null, bind = setUIAuthenticationExtender, unbind = unsetUIAuthenticationExtender]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:03.908
+!MESSAGE Could not bind a reference of component core.ui.dscomponent. The reference is: Reference[name = ui.authentication.extender, interface = org.wso2.carbon.ui.UIAuthenticationExtender, policy = dynamic, cardinality = 0..1, target = null, bind = setUIAuthenticationExtender, unbind = unsetUIAuthenticationExtender]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:04.141
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.resource. The reference is: Reference[name = registry.download.service, interface = org.wso2.carbon.registry.resource.download.DownloadManagerService, policy = dynamic, cardinality = 0..1, target = null, bind = setDownloadManagerService, unbind = unsetDownloadManagerService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:04.141
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.resource. The reference is: Reference[name = registry.download.service, interface = org.wso2.carbon.registry.resource.download.DownloadManagerService, policy = dynamic, cardinality = 0..1, target = null, bind = setDownloadManagerService, unbind = unsetDownloadManagerService]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:04.152
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.servlet. The reference is: Reference[name = registry.uddi, interface = org.wso2.carbon.registry.core.servlet.UDDIServlet, policy = dynamic, cardinality = 0..1, target = null, bind = setJUDDIRegistryServlet, unbind = unsetJUDDIRegistryServlet]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:04.153
+!MESSAGE Could not bind a reference of component org.wso2.carbon.registry.servlet. The reference is: Reference[name = registry.uddi, interface = org.wso2.carbon.registry.core.servlet.UDDIServlet, policy = dynamic, cardinality = 0..1, target = null, bind = setJUDDIRegistryServlet, unbind = unsetJUDDIRegistryServlet]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:04.276
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
+
+!ENTRY org.eclipse.equinox.ds 4 0 2019-01-08 12:33:04.276
+!MESSAGE Could not bind a reference of component identity.oauth.component. The reference is: Reference[name = org.wso2.carbon.identity.oauth.event.OAuthEventListener, interface = org.wso2.carbon.identity.oauth.event.OAuthEventListener, policy = dynamic, cardinality = 0..n, target = null, bind = setOauthEventListener, unbind = unsetOauthEventListener]
