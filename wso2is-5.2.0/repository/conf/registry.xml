@@ -30,8 +30,8 @@
     <dbConfig name="wso2registry">
         <dataSource>jdbc/WSO2CarbonDB</dataSource>
     </dbConfig>
-	<dbConfig name="s">
-        <dataSource>jdbc/WSO2REG_DB</dataSource>
+	<dbConfig name="govregistry">
+  		<dataSource>jdbc/WSO2REG_DB</dataSource>
 	</dbConfig>
 
    <handler class="org.wso2.carbon.identity.entitlement.policy.finder.registry.RegistryPolicyHandler">

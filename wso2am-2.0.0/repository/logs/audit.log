@@ -1,1 +1,2 @@
-[2019-01-08 12:33:41,797]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-08 12:33:41,797+0100] 
+[2019-01-11 14:45:40,224]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"created","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"h\",\"context\":\"\\\/cas\\\/0.0.1\",\"version\":\"0.0.1\"}"} 
+[2019-01-11 14:45:40,812]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"h\",\"context\":\"\\\/cas\\\/0.0.1\",\"version\":\"0.0.1\"}"} 

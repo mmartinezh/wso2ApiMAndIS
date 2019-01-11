@@ -2627,3 +2627,8 @@ org.wso2.carbon.registry.core.exceptions.RegistryException: Could not set author
 2019-01-08 12:33:02,869 [-] [localhost-startStop-1]  WARN AndesConfigurationManager Error when trying to read property : transaction/maxWaitTimeout. Switching to default value : 30
 2019-01-08 12:33:03,008 [-] [localhost-startStop-1]  WARN AndesRecoveryTask Recovering node. Adding queue [DeadLetterChannel] OW=admin/X=false/Dtrue/LPT0
 2019-01-08 12:33:03,116 [-] [localhost-startStop-1]  WARN QpidServiceComponent MQTT Transport is disabled as per configuration.
+2019-01-11 14:36:12,254 [-] [Start Level Event Dispatcher]  WARN ValidationResultPrinter Swap Memory size (MB): 1024 of the system is below the recommended minimum size :2047
+2019-01-11 14:36:12,255 [-] [Start Level Event Dispatcher]  WARN ValidationResultPrinter Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile.
+2019-01-11 14:36:49,959 [-] [localhost-startStop-1]  WARN AndesConfigurationManager Error when trying to read property : transaction/maxWaitTimeout. Switching to default value : 30
+2019-01-11 14:36:50,051 [-] [localhost-startStop-1]  WARN AndesRecoveryTask Recovering node. Adding queue [DeadLetterChannel] OW=admin/X=false/Dtrue/LPT0
+2019-01-11 14:36:50,145 [-] [localhost-startStop-1]  WARN QpidServiceComponent MQTT Transport is disabled as per configuration.
