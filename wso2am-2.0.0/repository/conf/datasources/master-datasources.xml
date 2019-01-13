@@ -27,6 +27,8 @@
             </definition>
         </datasource>
 
+      
+
          <datasource>
             <name>WSO2AM_STATS_DB</name>
             <description>The datasource used for getting statistics to API Manager</description>
@@ -71,57 +73,14 @@
             </definition>
         </datasource>
 
- 
-<datasource>
-    <name>WSO2REG_DB</name>
-    <description>The datasource used for registry</description>
-    <jndiConfig>
-        <name>jdbc/WSO2REG_DB</name>
-    </jndiConfig>
-    <definition type="RDBMS">
-        <configuration>
-			<url>jdbc:mysql://localhost:3306/JDBC_user_store?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</url>
-            <username>apiuser</username>
-            <password>apimanager</password>
-            <driverClassName>com.mysql.jdbc.Driver</driverClassName>
-            <maxActive>50</maxActive>
-            <maxWait>60000</maxWait>
-            <testOnBorrow>true</testOnBorrow>
-            <validationQuery>SELECT 1</validationQuery>
-            <validationInterval>30000</validationInterval>
-        </configuration>
-    </definition>
-</datasource>
- 
-<datasource>
-    <name>WSO2UM_DB</name>
-    <description>The datasource used for user management</description>
-    <jndiConfig>
-        <name>jdbc/WSO2UM_DB</name>
-    </jndiConfig>
-    <definition type="RDBMS">
-        <configuration>
-   			<url>jdbc:mysql://localhost:3306/JDBC_user_store?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</url>
-            <username>apiuser</username>
-            <password>apimanager</password>
-            <driverClassName>com.mysql.jdbc.Driver</driverClassName>
-            <maxActive>50</maxActive>
-            <maxWait>60000</maxWait>
-            <testOnBorrow>true</testOnBorrow>
-            <validationQuery>SELECT 1</validationQuery>
-            <validationInterval>30000</validationInterval>
-        </configuration>
-    </definition>
-</datasource>
-<datasource>
+       <datasource>
     <name>WSO2AM_DB</name>
     <description>The datasource used for API Manager database</description>
     <jndiConfig>
         <name>jdbc/WSO2AM_DB</name>
     </jndiConfig>
     <definition type="RDBMS">
-        <configuration>  
-        	<url>jdbc:mysql://localhost:3306/JDBC_user_store?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</url>
+        <configuration>  <url>jdbc:mysql://localhost:3306/apimgt?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</url>
             <username>apiuser</username>
             <password>apimanager</password>
             <driverClassName>com.mysql.jdbc.Driver</driverClassName>
@@ -135,6 +94,47 @@
     </definition>
 </datasource>
  
+<datasource>
+    <name>WSO2REG_DB</name>
+    <description>The datasource used for registry and user manager</description>
+    <jndiConfig>
+        <name>jdbc/WSO2REG_DB</name>
+    </jndiConfig>
+    <definition type="RDBMS">
+        <configuration>
+<url>jdbc:mysql://localhost:3306/registry?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</url>
+            <username>apiuser</username>
+            <password>apimanager</password>
+            <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+            <maxActive>50</maxActive>
+            <maxWait>60000</maxWait>
+            <testOnBorrow>true</testOnBorrow>
+            <validationQuery>SELECT 1</validationQuery>
+            <validationInterval>30000</validationInterval>
+        </configuration>
+    </definition>
+</datasource>
+ 
+<datasource>
+    <name>WSO2UM_DB</name>
+    <description>The datasource used for registry and user manager</description>
+    <jndiConfig>
+        <name>jdbc/WSO2UM_DB</name>
+    </jndiConfig>
+    <definition type="RDBMS">
+        <configuration>
+   <url>jdbc:mysql://localhost:3306/userstore?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</url>
+            <username>apiuser</username>
+            <password>apimanager</password>
+            <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+            <maxActive>50</maxActive>
+            <maxWait>60000</maxWait>
+            <testOnBorrow>true</testOnBorrow>
+            <validationQuery>SELECT 1</validationQuery>
+            <validationInterval>30000</validationInterval>
+        </configuration>
+    </definition>
+</datasource>
 
     </datasources>
 

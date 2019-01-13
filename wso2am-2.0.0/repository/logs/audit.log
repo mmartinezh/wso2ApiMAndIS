@@ -1,1 +1,2 @@
-[2019-01-08 12:33:41,797]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-08 12:33:41,797+0100] 
+[2019-01-13 18:25:35,852]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-13 18:25:35,850+0100] 
+[2019-01-13 18:25:36,099]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"deleted","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"version\":\"1.0.0\"}"} 

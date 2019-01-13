@@ -1,0 +1,26 @@
+[2019-01-12 22:10:59,120]  INFO {AUDIT_LOG}-  Initiator : wso2.system.user | Action : Add BPS Profile | Data : { "Profile Name" : "embeded_bps","Manager Host URL" : "https://localhost:9444/services","Worker Host URL" : "https://localhost:9444/services","User" : "admin" } | Result :  Success  
+[2019-01-12 22:13:12,079]  INFO {AUDIT_LOG}-  'admin@carbon.super [-1234]' logged in at [2019-01-12 22:13:12,077+0100] 
+[2019-01-12 22:50:24,250]  INFO {AUDIT_LOG}-  Initiator : wso2.system.user | Action : Add BPS Profile | Data : { "Profile Name" : "embeded_bps","Manager Host URL" : "https://localhost:9444/services","Worker Host URL" : "https://localhost:9444/services","User" : "WSO2.ORG/admin" } | Result :  Success  
+[2019-01-12 22:50:48,450]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 22:50:48,450+0100] 
+[2019-01-12 23:06:52,926]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged out at [2019-01-12 23:06:52,0925] 
+[2019-01-12 23:07:08,104]  WARN {AUDIT_LOG}-  Failed Administrator login attempt 'admin[-1234]' at [2019-01-12 23:07:08,103+0100] 
+[2019-01-12 23:11:31,855]  WARN {AUDIT_LOG}-  Failed Administrator login attempt 'admin[-1234]' at [2019-01-12 23:11:31,854+0100] 
+[2019-01-12 23:12:14,887]  WARN {AUDIT_LOG}-  Failed Administrator login attempt 'admin[-1234]' at [2019-01-12 23:12:14,886+0100] 
+[2019-01-12 23:15:59,154]  WARN {AUDIT_LOG}-  Failed Administrator login attempt 'admin[-1234]' at [2019-01-12 23:15:59,153+0100] 
+[2019-01-12 23:16:14,887]  WARN {AUDIT_LOG}-  Failed Administrator login attempt 'admin[-1234]' at [2019-01-12 23:16:14,886+0100] 
+[2019-01-12 23:16:24,745]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:16:24,744+0100] 
+[2019-01-12 23:19:21,215] ERROR {AUDIT_LOG}-  Illegal access attempt at [2019-01-12 23:19:21,0215] from IP address null while trying to authenticate access to service RegistryAdminService 
+[2019-01-12 23:19:27,039]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:19:27,038+0100] 
+[2019-01-12 23:21:03,052]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:03,051+0100] 
+[2019-01-12 23:21:13,359]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:13,358+0100] 
+[2019-01-12 23:21:59,941]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:59,940+0100] 
+[2019-01-12 23:24:36,698]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:24:36,697+0100] 
+[2019-01-12 23:24:58,695] ERROR {AUDIT_LOG}-  Illegal access attempt at [2019-01-12 23:24:58,0693] from IP address null while trying to authenticate access to service RegistryAdminService 
+[2019-01-12 23:25:02,756]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:25:02,755+0100] 
+[2019-01-12 23:25:16,556]  INFO {AUDIT_LOG}-  Initiator : WSO2.ORG/admin@carbon.super | Action : Add User | Target : testUser | Data : { Roles :Internal/admin, } | Result : Success  
+[2019-01-12 23:25:31,241]  INFO {AUDIT_LOG}-  'WSO2.ORG/testUser@carbon.super [-1234]' logged in at [2019-01-12 23:25:31,240+0100] 
+[2019-01-12 23:27:08,758]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:27:08,757+0100] 
+[2019-01-12 23:27:35,700]  INFO {AUDIT_LOG}-  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:27:35,700+0100] 
+[2019-01-12 23:27:35,719]  INFO {AUDIT_LOG}-  Initiator : WSO2.ORG/admin | Action : create | Target : 0 | Data : { WSO2.ORG_admin_DefaultApplication_PRODUCTION } | Result : Success  
+[2019-01-12 23:27:35,799]  INFO {AUDIT_LOG}-  Initiator : WSO2.ORG/admin | Action : update | Target : 2 | Data : { WSO2.ORG_admin_DefaultApplication_PRODUCTION } | Result : Success  
+[2019-01-12 23:27:35,919]  INFO {AUDIT_LOG}-  Initiator : WSO2.ORG/admin | Action : update | Target : 2 | Data : { WSO2.ORG_admin_DefaultApplication_PRODUCTION } | Result : Success  
