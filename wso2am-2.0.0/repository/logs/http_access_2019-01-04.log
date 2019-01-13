@@ -1,6 +1,0 @@
-127.0.0.1 - - [04/Jan/2019:12:34:59 +0100] "GET /throttle/data/v1/block HTTP/1.1" 200 68 "-" "-"
-127.0.0.1 - - [04/Jan/2019:12:34:59 +0100] "GET /throttle/data/v1/keyTemplates HTTP/1.1" 200 12 "-" "-"
-127.0.0.1 - - [04/Jan/2019:13:02:22 +0100] "GET /throttle/data/v1/keyTemplates HTTP/1.1" 200 12 "-" "-"
-127.0.0.1 - - [04/Jan/2019:13:02:22 +0100] "GET /throttle/data/v1/block HTTP/1.1" 200 68 "-" "-"
-- 127.0.0.1  - [04/Jan/2019:13:02:04 +0100] "- - " 404 - "-" "-"
-- 127.0.0.1 - - [04/Jan/2019:13:02:04 +0100] "GET / HTTP/1.1" - - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15"

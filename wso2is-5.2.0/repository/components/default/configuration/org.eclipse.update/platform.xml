@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1546603434127" transient="false">
+<config date="1547327784163" transient="false">
 	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
 		<feature id="org.wso2.carbon.event.output.adapter.wso2event.server" version="5.1.1" url="features/org.wso2.carbon.event.output.adapter.wso2event.server_5.1.1/">
 		</feature>

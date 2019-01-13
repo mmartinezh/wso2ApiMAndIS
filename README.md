@@ -16,9 +16,9 @@ export PATH=$PATH:$M2_HOME/bin:$mysql/bin
 mysql -u root -p  (pwd del usuario root facilitada en la instalación 4669MacMMH) 
 Creamos la bbdd
 
-create database JDBC_user_store; 
+create database apimgt, registry and userstore
 
-use JDBC_user_store;
+use <bbdd name>;
 
 Para crear usuarios CREATE USER 'apiuser'@'localhost' IDENTIFIED BY 'apimanager';
 
@@ -29,9 +29,9 @@ GRANT ALL PRIVILEGES ON userstore.* TO 'apiuser'@'localhost'
 GRANT ALL PRIVILEGES ON registry.* TO 'apiuser'@'localhost'
 
 IS:
-source /Library/WSO2/IdentityServer/5.7.0/dbscripts/mysql.sql
+source /Library/WSO2/IdentityServer/5.7.0/dbscripts/mysql.sql and mysql5.7
 APIM:
-source /Library/WSO2/wso2am-2.0.0/dbscripts/mysql.sql
+source /Library/WSO2/wso2am-2.0.0/dbscripts/mysql.sql and mysql5.7
 
 
 

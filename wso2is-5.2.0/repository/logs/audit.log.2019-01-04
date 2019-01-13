@@ -1,2 +1,0 @@
-[2019-01-04 12:41:33,817]  INFO {AUDIT_LOG}-  Initiator : wso2.system.user | Action : Add BPS Profile | Data : { "Profile Name" : "embeded_bps","Manager Host URL" : "https://localhost:9444/services","Worker Host URL" : "https://localhost:9444/services","User" : "admin" } | Result :  Success  
-[2019-01-04 13:02:20,985]  INFO {AUDIT_LOG}-  'admin@carbon.super [-1234]' logged in at [2019-01-04 13:02:20,983+0100] 

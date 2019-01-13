@@ -1,2 +1,0 @@
-127.0.0.1 - - [11/Jan/2019:14:45:17 +0100] "POST /services/AuthenticationAdmin HTTP/1.1" 200 299 "-" "Axis2"
-127.0.0.1 - - [11/Jan/2019:14:45:17 +0100] "POST /services/LoggedUserInfoAdmin HTTP/1.1" 200 777 "-" "Axis2"

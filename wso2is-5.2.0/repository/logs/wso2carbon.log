@@ -1,997 +1,216 @@
-TID: [-1] [] [2019-01-11 14:36:58,232]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1795799895/ 
-TID: [-1] [] [2019-01-11 14:36:58,223]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1795799895/ 
-TID: [-1234] [] [2019-01-11 14:36:58,551]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... 
-TID: [-1234] [] [2019-01-11 14:36:58,553]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Mac OS X 10.14.2, x86_64 
-TID: [-1234] [] [2019-01-11 14:36:58,553]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre 
-TID: [-1234] [] [2019-01-11 14:36:58,553]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.8.0_151 
-TID: [-1234] [] [2019-01-11 14:36:58,553]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 25.151-b12,Oracle Corporation 
-TID: [-1234] [] [2019-01-11 14:36:58,554]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0 
-TID: [-1234] [] [2019-01-11 14:36:58,554]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/tmp 
-TID: [-1234] [] [2019-01-11 14:36:58,554]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : marcosmartinezhernandez, en-US, Europe/Madrid 
-TID: [-1234] [] [2019-01-11 14:36:58,662]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 1024 of the system is below the recommended minimum size :2047 
-TID: [-1234] [] [2019-01-11 14:36:58,662]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. 
-TID: [-1] [] [2019-01-11 14:36:58,815]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service 
-TID: [-1] [] [2019-01-11 14:36:58,884]  INFO {org.wso2.carbon.event.processor.manager.core.internal.util.ManagementModeConfigurationLoader} -  CEP started in Single node mode 
-TID: [-1234] [] [2019-01-11 14:36:59,276]  INFO {org.wso2.carbon.ldap.server.configuration.LDAPConfigurationBuilder} -  KDC server is disabled. 
-TID: [-1] [] [2019-01-11 14:37:01,611]  INFO {org.wso2.carbon.mex.internal.MexComponent} -  MexServiceComponent bundle activated successfully.. 
-TID: [-1234] [] [2019-01-11 14:37:02,624]  WARN {org.apache.tomcat.jdbc.pool.ConnectionPool} -  maxIdle is larger than maxActive, setting maxIdle to: 40 
-TID: [-1234] [] [2019-01-11 14:37:03,509]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 79ms 
-TID: [-1234] [] [2019-01-11 14:37:03,526] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't find db configuration 'govregistry' 
-TID: [-1234] [] [2019-01-11 14:37:03,526] ERROR {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Failed to configure the embedded registry. Invalid data access manager. 
-TID: [-1234] [] [2019-01-11 14:37:03,527] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager. 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistryContext(MountHandler.java:356)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.getRegistryContext(HandlerManager.java:3185)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.getRegistryContext(UserDefinedHandlerManager.java:265)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.getRegistryContext(HandlerLifecycleManager.java:1262)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.getRegistryContext(EmbeddedRegistry.java:469)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.getRegistryContext(CacheBackedRegistry.java:519)
-	at org.wso2.carbon.registry.core.session.UserRegistry.addRootCollection(UserRegistry.java:370)
-	at org.wso2.carbon.registry.core.session.UserRegistry.init(UserRegistry.java:328)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$100(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$2.run(UserRegistry.java:249)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:246)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:225)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getUserRegistry(EmbeddedRegistryService.java:427)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getSystemRegistry(EmbeddedRegistryService.java:292)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getConfigSystemRegistry(EmbeddedRegistryService.java:485)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.setupMediaTypes(RegistryUtils.java:1144)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:533)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-TID: [-1234] [] [2019-01-11 14:37:03,531] ERROR {org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler} -  An error occurred while obtaining the remote registry instance 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:649)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistryContext(MountHandler.java:356)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.getRegistryContext(HandlerManager.java:3185)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.getRegistryContext(UserDefinedHandlerManager.java:265)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.getRegistryContext(HandlerLifecycleManager.java:1262)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.getRegistryContext(EmbeddedRegistry.java:469)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.getRegistryContext(CacheBackedRegistry.java:519)
-	at org.wso2.carbon.registry.core.session.UserRegistry.addRootCollection(UserRegistry.java:370)
-	at org.wso2.carbon.registry.core.session.UserRegistry.init(UserRegistry.java:328)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$100(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$2.run(UserRegistry.java:249)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:246)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:225)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getUserRegistry(EmbeddedRegistryService.java:427)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getSystemRegistry(EmbeddedRegistryService.java:292)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getConfigSystemRegistry(EmbeddedRegistryService.java:485)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.setupMediaTypes(RegistryUtils.java:1144)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:533)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	... 57 more
-TID: [-1234] [] [2019-01-11 14:37:03,720] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't find db configuration 'govregistry' 
-TID: [-1234] [] [2019-01-11 14:37:03,720] ERROR {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Failed to configure the embedded registry. Invalid data access manager. 
-TID: [-1234] [] [2019-01-11 14:37:03,720] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager. 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:326)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:306)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.resourceExists(HandlerManager.java:3130)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.resourceExists(UserDefinedHandlerManager.java:260)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.resourceExists(HandlerLifecycleManager.java:1233)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.resourceExists(EmbeddedRegistry.java:637)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.resourceExists(CacheBackedRegistry.java:376)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExistsInternal(UserRegistry.java:774)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$800(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:757)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:754)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExists(UserRegistry.java:754)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.systemResourceShouldBeAdded(RegistryUtils.java:640)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1022)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-TID: [-1234] [] [2019-01-11 14:37:03,723] ERROR {org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler} -  Unable to test existence of resource 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:649)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:326)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:306)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.resourceExists(HandlerManager.java:3130)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.resourceExists(UserDefinedHandlerManager.java:260)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.resourceExists(HandlerLifecycleManager.java:1233)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.resourceExists(EmbeddedRegistry.java:637)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.resourceExists(CacheBackedRegistry.java:376)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExistsInternal(UserRegistry.java:774)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$800(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:757)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:754)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExists(UserRegistry.java:754)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.systemResourceShouldBeAdded(RegistryUtils.java:640)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1022)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	... 55 more
-TID: [-1234] [] [2019-01-11 14:37:03,729] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't find db configuration 'govregistry' 
-TID: [-1234] [] [2019-01-11 14:37:03,729] ERROR {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Failed to configure the embedded registry. Invalid data access manager. 
-TID: [-1234] [] [2019-01-11 14:37:03,729] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager. 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.put(MountHandler.java:269)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.put(HandlerManager.java:2503)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.put(UserDefinedHandlerManager.java:205)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.put(HandlerLifecycleManager.java:949)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.put(EmbeddedRegistry.java:697)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.put(CacheBackedRegistry.java:591)
-	at org.wso2.carbon.registry.core.session.UserRegistry.putInternal(UserRegistry.java:828)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$1000(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:804)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:801)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.put(UserRegistry.java:801)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1032)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-TID: [-1234] [] [2019-01-11 14:37:03,731] ERROR {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Failed to activate Registry Core bundle  
-org.wso2.carbon.registry.core.exceptions.RegistryException: Unable to put resource Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.put(MountHandler.java:299)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.put(HandlerManager.java:2503)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.put(UserDefinedHandlerManager.java:205)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.put(HandlerLifecycleManager.java:949)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.put(EmbeddedRegistry.java:697)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.put(CacheBackedRegistry.java:591)
-	at org.wso2.carbon.registry.core.session.UserRegistry.putInternal(UserRegistry.java:828)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$1000(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:804)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:801)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.put(UserRegistry.java:801)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1032)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:649)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.put(MountHandler.java:269)
-	... 51 more
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	... 53 more
-TID: [-1234] [] [2019-01-11 14:37:03,763]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. 
-TID: [-1] [] [2019-01-11 14:37:12,116]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined 
-TID: [-1] [] [2019-01-11 14:37:12,240]  INFO {org.wso2.carbon.identity.authenticator.x509Certificate.internal.X509CertificateServiceComponent} -  X509 Certificate Servlet activated successfully.. 
-TID: [-1] [] [2019-01-11 14:40:50,731]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1795799895/ 
-TID: [-1] [] [2019-01-11 14:40:50,726]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1795799895/ 
-TID: [-1234] [] [2019-01-11 14:40:50,921]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... 
-TID: [-1234] [] [2019-01-11 14:40:50,923]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Mac OS X 10.14.2, x86_64 
-TID: [-1234] [] [2019-01-11 14:40:50,923]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre 
-TID: [-1234] [] [2019-01-11 14:40:50,923]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.8.0_151 
-TID: [-1234] [] [2019-01-11 14:40:50,923]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 25.151-b12,Oracle Corporation 
-TID: [-1234] [] [2019-01-11 14:40:50,923]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0 
-TID: [-1234] [] [2019-01-11 14:40:50,923]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/tmp 
-TID: [-1234] [] [2019-01-11 14:40:50,924]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : marcosmartinezhernandez, en-US, Europe/Madrid 
-TID: [-1234] [] [2019-01-11 14:40:51,029]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 1024 of the system is below the recommended minimum size :2047 
-TID: [-1234] [] [2019-01-11 14:40:51,029]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. 
-TID: [-1] [] [2019-01-11 14:40:51,159]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service 
-TID: [-1] [] [2019-01-11 14:40:51,226]  INFO {org.wso2.carbon.event.processor.manager.core.internal.util.ManagementModeConfigurationLoader} -  CEP started in Single node mode 
-TID: [-1234] [] [2019-01-11 14:40:51,538]  INFO {org.wso2.carbon.ldap.server.configuration.LDAPConfigurationBuilder} -  KDC server is disabled. 
-TID: [-1] [] [2019-01-11 14:40:53,377]  INFO {org.wso2.carbon.mex.internal.MexComponent} -  MexServiceComponent bundle activated successfully.. 
-TID: [-1234] [] [2019-01-11 14:40:54,412]  WARN {org.apache.tomcat.jdbc.pool.ConnectionPool} -  maxIdle is larger than maxActive, setting maxIdle to: 40 
-TID: [-1234] [] [2019-01-11 14:40:55,257]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 59ms 
-TID: [-1234] [] [2019-01-11 14:40:55,274] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't find db configuration 'govregistry' 
-TID: [-1234] [] [2019-01-11 14:40:55,274] ERROR {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Failed to configure the embedded registry. Invalid data access manager. 
-TID: [-1234] [] [2019-01-11 14:40:55,275] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager. 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistryContext(MountHandler.java:356)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.getRegistryContext(HandlerManager.java:3185)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.getRegistryContext(UserDefinedHandlerManager.java:265)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.getRegistryContext(HandlerLifecycleManager.java:1262)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.getRegistryContext(EmbeddedRegistry.java:469)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.getRegistryContext(CacheBackedRegistry.java:519)
-	at org.wso2.carbon.registry.core.session.UserRegistry.addRootCollection(UserRegistry.java:370)
-	at org.wso2.carbon.registry.core.session.UserRegistry.init(UserRegistry.java:328)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$100(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$2.run(UserRegistry.java:249)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:246)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:225)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getUserRegistry(EmbeddedRegistryService.java:427)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getSystemRegistry(EmbeddedRegistryService.java:292)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getConfigSystemRegistry(EmbeddedRegistryService.java:485)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.setupMediaTypes(RegistryUtils.java:1144)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:533)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-TID: [-1234] [] [2019-01-11 14:40:55,279] ERROR {org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler} -  An error occurred while obtaining the remote registry instance 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:649)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistryContext(MountHandler.java:356)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.getRegistryContext(HandlerManager.java:3185)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.getRegistryContext(UserDefinedHandlerManager.java:265)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.getRegistryContext(HandlerLifecycleManager.java:1262)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.getRegistryContext(EmbeddedRegistry.java:469)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.getRegistryContext(CacheBackedRegistry.java:519)
-	at org.wso2.carbon.registry.core.session.UserRegistry.addRootCollection(UserRegistry.java:370)
-	at org.wso2.carbon.registry.core.session.UserRegistry.init(UserRegistry.java:328)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$100(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$2.run(UserRegistry.java:249)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:246)
-	at org.wso2.carbon.registry.core.session.UserRegistry.<init>(UserRegistry.java:225)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getUserRegistry(EmbeddedRegistryService.java:427)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getSystemRegistry(EmbeddedRegistryService.java:292)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.getConfigSystemRegistry(EmbeddedRegistryService.java:485)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.setupMediaTypes(RegistryUtils.java:1144)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:533)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	... 57 more
-TID: [-1234] [] [2019-01-11 14:40:55,325] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't find db configuration 'govregistry' 
-TID: [-1234] [] [2019-01-11 14:40:55,325] ERROR {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Failed to configure the embedded registry. Invalid data access manager. 
-TID: [-1234] [] [2019-01-11 14:40:55,325] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager. 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:326)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:306)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.resourceExists(HandlerManager.java:3130)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.resourceExists(UserDefinedHandlerManager.java:260)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.resourceExists(HandlerLifecycleManager.java:1233)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.resourceExists(EmbeddedRegistry.java:637)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.resourceExists(CacheBackedRegistry.java:376)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExistsInternal(UserRegistry.java:774)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$800(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:757)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:754)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExists(UserRegistry.java:754)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.systemResourceShouldBeAdded(RegistryUtils.java:640)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1022)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-TID: [-1234] [] [2019-01-11 14:40:55,328] ERROR {org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler} -  Unable to test existence of resource 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:649)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:326)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.resourceExists(MountHandler.java:306)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.resourceExists(HandlerManager.java:3130)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.resourceExists(UserDefinedHandlerManager.java:260)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.resourceExists(HandlerLifecycleManager.java:1233)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.resourceExists(EmbeddedRegistry.java:637)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.resourceExists(CacheBackedRegistry.java:376)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExistsInternal(UserRegistry.java:774)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$800(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:757)
-	at org.wso2.carbon.registry.core.session.UserRegistry$9.run(UserRegistry.java:754)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.resourceExists(UserRegistry.java:754)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.systemResourceShouldBeAdded(RegistryUtils.java:640)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1022)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	... 55 more
-TID: [-1234] [] [2019-01-11 14:40:55,342] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't find db configuration 'govregistry' 
-TID: [-1234] [] [2019-01-11 14:40:55,348] ERROR {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Failed to configure the embedded registry. Invalid data access manager. 
-TID: [-1234] [] [2019-01-11 14:40:55,349] ERROR {org.wso2.carbon.registry.core.config.RegistryContext} -  Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager. 
-org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.put(MountHandler.java:269)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.put(HandlerManager.java:2503)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.put(UserDefinedHandlerManager.java:205)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.put(HandlerLifecycleManager.java:949)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.put(EmbeddedRegistry.java:697)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.put(CacheBackedRegistry.java:591)
-	at org.wso2.carbon.registry.core.session.UserRegistry.putInternal(UserRegistry.java:828)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$1000(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:804)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:801)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.put(UserRegistry.java:801)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1032)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-TID: [-1234] [] [2019-01-11 14:40:55,351] ERROR {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Failed to activate Registry Core bundle  
-org.wso2.carbon.registry.core.exceptions.RegistryException: Unable to put resource Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.put(MountHandler.java:299)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerManager.put(HandlerManager.java:2503)
-	at org.wso2.carbon.registry.core.jdbc.handlers.UserDefinedHandlerManager.put(UserDefinedHandlerManager.java:205)
-	at org.wso2.carbon.registry.core.jdbc.handlers.HandlerLifecycleManager.put(HandlerLifecycleManager.java:949)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistry.put(EmbeddedRegistry.java:697)
-	at org.wso2.carbon.registry.core.caching.CacheBackedRegistry.put(CacheBackedRegistry.java:591)
-	at org.wso2.carbon.registry.core.session.UserRegistry.putInternal(UserRegistry.java:828)
-	at org.wso2.carbon.registry.core.session.UserRegistry.access$1000(UserRegistry.java:61)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:804)
-	at org.wso2.carbon.registry.core.session.UserRegistry$11.run(UserRegistry.java:801)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.wso2.carbon.registry.core.session.UserRegistry.put(UserRegistry.java:801)
-	at org.wso2.carbon.registry.core.utils.RegistryUtils.addServiceStoreCollection(RegistryUtils.java:1032)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.buildRegistryService(RegistryCoreServiceComponent.java:537)
-	at org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent.activate(RegistryCoreServiceComponent.java:126)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
-	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
-	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
-	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
-	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
-	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
-	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
-	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:69)
-	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
-	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
-	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Couldn't initialize EmbeddedRegistryService. Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:649)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.getRegistry(MountHandler.java:221)
-	at org.wso2.carbon.registry.core.jdbc.handlers.builtin.MountHandler.put(MountHandler.java:269)
-	... 51 more
-Caused by: org.wso2.carbon.registry.core.exceptions.RegistryException: Failed to configure the embedded registry. Invalid data access manager.
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.configure(EmbeddedRegistryService.java:167)
-	at org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService.<init>(EmbeddedRegistryService.java:99)
-	at org.wso2.carbon.registry.core.config.RegistryContext.getEmbeddedRegistryService(RegistryContext.java:645)
-	... 53 more
-TID: [-1234] [] [2019-01-11 14:40:55,391]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. 
-TID: [-1] [] [2019-01-11 14:41:01,595]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined 
-TID: [-1] [] [2019-01-11 14:41:01,691]  INFO {org.wso2.carbon.identity.authenticator.x509Certificate.internal.X509CertificateServiceComponent} -  X509 Certificate Servlet activated successfully.. 
-TID: [-1] [] [2019-01-11 14:44:21,960]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1795799895/ 
-TID: [-1] [] [2019-01-11 14:44:21,955]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1795799895/ 
-TID: [-1234] [] [2019-01-11 14:44:22,129]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... 
-TID: [-1234] [] [2019-01-11 14:44:22,130]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Mac OS X 10.14.2, x86_64 
-TID: [-1234] [] [2019-01-11 14:44:22,131]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre 
-TID: [-1234] [] [2019-01-11 14:44:22,131]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.8.0_151 
-TID: [-1234] [] [2019-01-11 14:44:22,131]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 25.151-b12,Oracle Corporation 
-TID: [-1234] [] [2019-01-11 14:44:22,131]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0 
-TID: [-1234] [] [2019-01-11 14:44:22,131]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/tmp 
-TID: [-1234] [] [2019-01-11 14:44:22,132]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : marcosmartinezhernandez, en-US, Europe/Madrid 
-TID: [-1234] [] [2019-01-11 14:44:22,224]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 1024 of the system is below the recommended minimum size :2047 
-TID: [-1234] [] [2019-01-11 14:44:22,224]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. 
-TID: [-1] [] [2019-01-11 14:44:22,347]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service 
-TID: [-1] [] [2019-01-11 14:44:22,397]  INFO {org.wso2.carbon.event.processor.manager.core.internal.util.ManagementModeConfigurationLoader} -  CEP started in Single node mode 
-TID: [-1234] [] [2019-01-11 14:44:22,715]  INFO {org.wso2.carbon.ldap.server.configuration.LDAPConfigurationBuilder} -  KDC server is disabled. 
-TID: [-1] [] [2019-01-11 14:44:24,579]  INFO {org.wso2.carbon.mex.internal.MexComponent} -  MexServiceComponent bundle activated successfully.. 
-TID: [-1234] [] [2019-01-11 14:44:25,537]  WARN {org.apache.tomcat.jdbc.pool.ConnectionPool} -  maxIdle is larger than maxActive, setting maxIdle to: 40 
-TID: [-1234] [] [2019-01-11 14:44:26,310]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 59ms 
-TID: [-1234] [] [2019-01-11 14:44:26,328]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Connected to mount at govregistry in 1ms 
-TID: [-1234] [] [2019-01-11 14:44:26,410]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Connected to mount at govregistry in 0ms 
-TID: [-1234] [] [2019-01-11 14:44:26,418]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE 
-TID: [-1] [] [2019-01-11 14:44:26,440]  INFO {org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent} -  Initialising Attachment Server 
-TID: [-1] [] [2019-01-11 14:44:28,725]  INFO {org.wso2.carbon.attachment.mgt.core.dao.impl.jpa.AbstractJPAVendorAdapter} -  [Attachment-Mgt OpenJPA] DB Dictionary: h2 
-TID: [-1] [] [2019-01-11 14:44:28,725]  INFO {org.wso2.carbon.attachment.mgt.core.dao.impl.jpa.AbstractJPAVendorAdapter} -  [Attachment-Mgt OpenJPA] Generate DDL Enabled. 
-TID: [-1] [] [2019-01-11 14:44:28,857]  INFO {org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent} -  Registering AttachmentServerService 
-TID: [-1] [] [2019-01-11 14:44:28,873]  INFO {org.wso2.carbon.bpel.core.internal.BPELServiceComponent} -  Initializing BPEL Engine........ 
-TID: [-1] [] [2019-01-11 14:44:28,899]  INFO {org.apache.ode.il.EmbeddedGeronimoFactory} -  Using embedded Geronimo transaction manager 
-TID: [-1] [] [2019-01-11 14:44:28,916]  INFO {org.apache.ode.il.dbutil.Database} -  ODE using external DataSource "bpsds". 
-TID: [-1] [] [2019-01-11 14:44:28,917]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Using DAO Connection Factory class: org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl 
-TID: [-1] [] [2019-01-11 14:44:28,917]  INFO {org.apache.ode.il.dbutil.Database} -  Using DAO Connection Factory class org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl. 
-TID: [-1] [] [2019-01-11 14:44:29,412]  INFO {org.apache.ode.store.jpa.DbConfStoreConnectionFactory} -  ProcessStore initializing transaction manager using org.apache.ode.il.EmbeddedGeronimoFactory 
-TID: [-1] [] [2019-01-11 14:44:29,412]  INFO {org.apache.ode.il.EmbeddedGeronimoFactory} -  Using embedded Geronimo transaction manager 
-TID: [-1] [] [2019-01-11 14:44:29,436]  INFO {org.apache.ode.scheduler.simple.JdbcDelegate} -  Using database H2 major version 1 
-TID: [-1] [] [2019-01-11 14:44:29,436]  INFO {org.apache.ode.scheduler.simple.JdbcDelegate} -  Using database dialect: H2 
-TID: [-1] [] [2019-01-11 14:44:29,459]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering E4X Extension... 
-TID: [-1] [] [2019-01-11 14:44:29,463]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering B4P Extension... 
-TID: [-1] [] [2019-01-11 14:44:29,467]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering B4P Filter... 
-TID: [-1] [] [2019-01-11 14:44:29,471]  INFO {org.apache.ode.bpel.engine.BpelServerImpl} -  BPEL Server Started. 
-TID: [-1] [] [2019-01-11 14:44:29,472]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering MBeans 
-TID: [-1] [] [2019-01-11 14:44:29,507]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  Initialising HumanTask Server 
-TID: [-1] [] [2019-01-11 14:44:29,535]  INFO {org.apache.ode.il.EmbeddedGeronimoFactory} -  Using embedded Geronimo transaction manager 
-TID: [-1] [] [2019-01-11 14:44:29,540]  INFO {org.wso2.carbon.humantask.core.dao.jpa.AbstractJPAVendorAdapter} -  [HT OpenJPA] DB Dictionary: h2 
-TID: [-1] [] [2019-01-11 14:44:29,540]  INFO {org.wso2.carbon.humantask.core.dao.jpa.AbstractJPAVendorAdapter} -  [HT OpenJPA] Generate DDL Enabled. 
-TID: [-1] [] [2019-01-11 14:44:29,559]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  Registering Axis2ConfigurationContextObserver 
-TID: [-1] [] [2019-01-11 14:44:29,564]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  Registering HT related MBeans 
-TID: [-1] [] [2019-01-11 14:44:29,571]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  MXBean for Human tasks registered successfully 
-TID: [-1234] [] [2019-01-11 14:44:29,830]  INFO {org.wso2.carbon.metrics.impl.util.JDBCReporterBuilder} -  Creating JDBC reporter for Metrics with source 'Marcoss-MacBook-Pro.local', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period 
-TID: [-1234] [] [2019-01-11 14:44:29,831]  INFO {org.wso2.carbon.metrics.impl.util.JmxReporterBuilder} -  Creating JMX reporter for Metrics with domain 'org.wso2.carbon.metrics' 
-TID: [-1234] [] [2019-01-11 14:44:29,835]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics 
-TID: [-1234] [] [2019-01-11 14:44:29,857]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics 
-TID: [-1234] [] [2019-01-11 14:44:31,347]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} -  Default Embedded Solr Server Initialized 
-TID: [-1234] [] [2019-01-11 14:44:31,595]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. 
-TID: [-1] [] [2019-01-11 14:44:33,813]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined 
-TID: [-1234] [] [2019-01-11 14:44:34,383]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled 
-TID: [-1234] [] [2019-01-11 14:44:34,580]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
-TID: [-1234] [] [2019-01-11 14:44:34,580]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
-TID: [-1234] [] [2019-01-11 14:44:34,585]  INFO {org.wso2.carbon.bpel.deployer.BPELDeployer} -  Initializing BPEL Deployer for tenant -1234. 
-TID: [-1234] [] [2019-01-11 14:44:34,591]  INFO {org.wso2.carbon.humantask.deployer.HumanTaskDeployer} -  Initializing HumanTask Deployer for tenant -1234. 
-TID: [-1234] [] [2019-01-11 14:44:35,321]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v20 - file:/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/client/modules/addressing-1.6.1-wso2v20.mar 
-TID: [-1234] [] [2019-01-11 14:44:35,324]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart-1.6.1-wso2v22 - file:/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/client/modules/rampart-1.6.1-wso2v22.mar 
-TID: [-1234] [] [2019-01-11 14:44:36,491]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: UserInformationRecoveryService {super-tenant} 
-TID: [-1234] [] [2019-01-11 14:44:36,491]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.identity.mgt-5.2.2 -  
-TID: [-1234] [] [2019-01-11 14:44:36,741]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: mex-ut {super-tenant} 
-TID: [-1234] [] [2019-01-11 14:44:36,741]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.mex-5.1.2 -  
-TID: [-1234] [] [2019-01-11 14:44:36,966]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: wso2carbon-sts {super-tenant} 
-TID: [-1234] [] [2019-01-11 14:44:36,985]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.sts-5.1.2 -  
-TID: [-1234] [] [2019-01-11 14:44:37,179]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/ 
-TID: [-1234] [] [2019-01-11 14:44:37,198]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  No RXTs Found. 
-TID: [-1234] [] [2019-01-11 14:44:37,198]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  Default tier policies not found in : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/resources/default-tiers/default-tiers.xml 
-TID: [-1234] [] [2019-01-11 14:44:37,199]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  Default tier policies not found in : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/resources/default-tiers/default-app-tiers.xml 
-TID: [-1234] [] [2019-01-11 14:44:37,199]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  Default tier policies not found in : /Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/resources/default-tiers/default-res-tiers.xml 
-TID: [-1234] [] [2019-01-11 14:44:37,305] ERROR {org.wso2.carbon.apimgt.impl.utils.APIUtil} -  Custom sequence template location unavailable for custom sequence type in : repository/resources/customsequences/in 
-TID: [-1234] [] [2019-01-11 14:44:37,305] ERROR {org.wso2.carbon.apimgt.impl.utils.APIUtil} -  Custom sequence template location unavailable for custom sequence type out : repository/resources/customsequences/out 
-TID: [-1234] [] [2019-01-11 14:44:37,305] ERROR {org.wso2.carbon.apimgt.impl.utils.APIUtil} -  Custom sequence template location unavailable for custom sequence type fault : repository/resources/customsequences/fault 
-TID: [-1234] [] [2019-01-11 14:44:37,417]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... 
-TID: [-1234] [] [2019-01-11 14:44:37,432]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 
-TID: [-1234] [] [2019-01-11 14:44:37,529]  INFO {org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler} -  org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler Initialised 
-TID: [-1234] [] [2019-01-11 14:44:37,529]  INFO {org.wso2.carbon.apimgt.keymgt.service.APIKeyValidationService} -  Initialised KeyValidationHandler instance successfully 
-TID: [-1234] [] [2019-01-11 14:44:37,539]  INFO {org.wso2.carbon.apimgt.keymgt.internal.APIKeyMgtServiceComponent} -  Started thrift key mgt service at port:10398 
-TID: [-1234] [] [2019-01-11 14:44:37,650]  INFO {org.wso2.carbon.identity.oauth2.internal.OAuth2ServiceComponent} -  PKCE Support enabled. 
-TID: [-1] [] [2019-01-11 14:44:37,723]  INFO {org.wso2.carbon.identity.entitlement.internal.SchemaBuilder} -  XACML policy schema loaded successfully. 
-TID: [-1234] [] [2019-01-11 14:44:38,154]  INFO {org.wso2.carbon.identity.sso.saml.admin.FileBasedConfigManager} -  A SSO Service Provider is registered for : wso2.my.dashboard 
-TID: [-1234] [] [2019-01-11 14:44:38,269]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9764 
-TID: [-1234] [] [2019-01-11 14:44:38,271]  INFO {org.wso2.carbon.core.transports.http.HttpsTransportListener} -  HTTPS port       : 9444 
-TID: [-1234] [] [2019-01-11 14:44:38,273]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELSchedulerInitializer} -  Starting BPS Scheduler 
-TID: [-1234] [] [2019-01-11 14:44:38,284]  INFO {openjpa.Runtime} -  Starting OpenJPA 2.2.0-wso2v1 
-TID: [-1234] [] [2019-01-11 14:44:38,359]  INFO {openjpa.jdbc.JDBC} -  Using dictionary class "org.apache.openjpa.jdbc.sql.H2Dictionary" (H2 1.3.175 (2014-01-18) ,H2 JDBC Driver 1.3.175 (2014-01-18)). 
-TID: [-1234] [] [2019-01-11 14:44:38,513]  INFO {org.wso2.carbon.humantask.core.HumanTaskSchedulerInitializer} -  Starting HumanTasks Scheduler 
-TID: [-1234] [] [2019-01-11 14:44:38,515]  INFO {openjpa.Runtime} -  Starting OpenJPA 2.2.0-wso2v1 
-TID: [-1234] [] [2019-01-11 14:44:38,515]  INFO {openjpa.jdbc.JDBC} -  Using dictionary class "org.apache.openjpa.jdbc.sql.H2Dictionary". 
-TID: [-1234] [] [2019-01-11 14:44:39,077]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :IsAnalytics-Publisher-wso2event-AuthenticationData.xml, Stream validation exception : Stream org.wso2.is.analytics.stream.OverallAuthentication:1.0.0 does not exist 
-TID: [-1234] [] [2019-01-11 14:44:39,078]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :IsAnalytics-Publisher-wso2event-SessionData.xml, Stream validation exception : Stream org.wso2.is.analytics.stream.OverallSession:1.0.0 does not exist 
-TID: [-1234] [] [2019-01-11 14:44:39,114]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-AuthenticationData.xml 
-TID: [-1234] [] [2019-01-11 14:44:39,122]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:org.wso2.is.analytics.stream.OverallAuthentication:1.0.0 
-TID: [-1234] [] [2019-01-11 14:44:39,125]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : IsAnalytics-Publisher-wso2event-AuthenticationData 
-TID: [-1234] [] [2019-01-11 14:44:39,125]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : org.wso2.is.analytics.stream.OverallAuthentication:1.0.0 
-TID: [-1234] [] [2019-01-11 14:44:39,128]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-SessionData.xml 
-TID: [-1234] [] [2019-01-11 14:44:39,132]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:org.wso2.is.analytics.stream.OverallSession:1.0.0 
-TID: [-1234] [] [2019-01-11 14:44:39,132]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : IsAnalytics-Publisher-wso2event-SessionData 
-TID: [-1234] [] [2019-01-11 14:44:39,133]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : org.wso2.is.analytics.stream.OverallSession:1.0.0 
-TID: [-1234] [] [2019-01-11 14:44:39,199]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/STRATOS_ROOT].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/STRATOS_ROOT] 
-TID: [-1234] [] [2019-01-11 14:44:39,456]  INFO {org.wso2.carbon.identity.application.authentication.endpoint.util.TenantDataManager} -  EndpointConfig.properties file loaded from ./repository/conf/identity/EndpointConfig.properties 
-TID: [-1234] [] [2019-01-11 14:44:39,555]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/authenticationendpoint].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/authenticationendpoint.war] 
-TID: [-1234] [] [2019-01-11 14:44:39,902]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/emailotpauthenticationendpoint].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/emailotpauthenticationendpoint.war] 
-TID: [-1234] [] [2019-01-11 14:44:40,993]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Fri Jan 11 14:44:40 CET 2019]; root of context hierarchy 
-TID: [-1234] [] [2019-01-11 14:44:41,038]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
-TID: [-1234] [] [2019-01-11 14:44:41,082]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/oauth2/WEB-INF/cxf-servlet.xml] 
-TID: [-1234] [] [2019-01-11 14:44:41,181]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@30ab1312: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,tokEP,authzEndpointBean,tokenEndpointBean,revokeEndpointBean,userinfoEndpointBean,jwksEndpointBean]; root of factory hierarchy 
-TID: [-1234] [] [2019-01-11 14:44:41,558]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
-TID: [-1234] [] [2019-01-11 14:44:41,631]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/oauth2].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/oauth2.war] 
-TID: [-1234] [] [2019-01-11 14:44:44,012]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features/features.txt are loading. 
-TID: [-1234] [] [2019-01-11 14:44:44,024]  INFO {org.apache.shindig.common.xml.XmlUtil} -  The XML processor being used does not support secure parsing. 
-TID: [-1234] [] [2019-01-11 14:44:44,025]  INFO {org.apache.shindig.common.xml.XmlUtil} -  Document builders are being reused. 
-TID: [-1234] [] [2019-01-11 14:44:44,226]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features-extras/features.txt are loading. 
-TID: [-1234] [] [2019-01-11 14:44:44,333]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Resources from containers/default/container.js are loading. 
-TID: [-1234] [] [2019-01-11 14:44:44,334]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Container configuration containers/default/container.js is being read. 
-TID: [-1234] [] [2019-01-11 14:44:44,750]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  Using random key for OAuth2 client-side state encryption 
-TID: [-1234] [] [2019-01-11 14:44:44,751]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  OAuth2CrypterProvider constructor 
-TID: [-1234] [] [2019-01-11 14:44:44,756]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider} -  Using random key for OAuth client-side state encryption 
-TID: [-1234] [] [2019-01-11 14:44:44,757]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  A random key for OAuth client-side state encryption is being used. 
-TID: [-1234] [] [2019-01-11 14:44:44,757]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  The OAuth signing key from res://wso2carbon.pem is loading. 
-TID: [-1234] [] [2019-01-11 14:44:44,893]  INFO {org.apache.shiro.realm.AuthorizingRealm} -  No cache or cacheManager properties have been set.  Authorization cache cannot be obtained. 
-TID: [-1234] [] [2019-01-11 14:44:44,893]  INFO {org.apache.shiro.config.IniSecurityManagerFactory} -  Realms have been explicitly set on the SecurityManager instance - auto-setting of realms will not occur. 
-TID: [-1234] [] [2019-01-11 14:44:44,900]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/shindig.war] 
-TID: [-1234] [] [2019-01-11 14:44:45,272]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/smsotpauthenticationendpoint].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/smsotpauthenticationendpoint.war] 
-TID: [-1234] [] [2019-01-11 14:44:46,251]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started 
-TID: [-1234] [] [2019-01-11 14:44:46,315]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Fri Jan 11 14:44:46 CET 2019]; root of context hierarchy 
-TID: [-1234] [] [2019-01-11 14:44:46,344]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] 
-TID: [-1234] [] [2019-01-11 14:44:46,381]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
-TID: [-1234] [] [2019-01-11 14:44:46,583]  INFO {org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor} -  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
-TID: [-1234] [] [2019-01-11 14:44:46,859]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
-TID: [-1234] [] [2019-01-11 14:44:46,936]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 685 ms 
-TID: [-1234] [] [2019-01-11 14:44:46,951]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/throttle/data/v1].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/throttle#data#v1.war] 
-TID: [-1234] [] [2019-01-11 14:44:47,127]  INFO {org.wso2.carbon.identity.application.authentication.endpoint.util.TenantDataManager} -  EndpointConfig.properties file loaded from ./repository/conf/identity/EndpointConfig.properties 
-TID: [-1234] [] [2019-01-11 14:44:47,129]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/totpauthenticationendpoint].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/totpauthenticationendpoint.war] 
-TID: [-1234] [] [2019-01-11 14:44:47,945]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Fri Jan 11 14:44:47 CET 2019]; root of context hierarchy 
-TID: [-1234] [] [2019-01-11 14:44:47,979]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
-TID: [-1234] [] [2019-01-11 14:44:48,014]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/wso2/WEB-INF/cxf-servlet.xml] 
-TID: [-1234] [] [2019-01-11 14:44:48,099]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@53041333: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,userResource,userBean,groupResource,groupBean,bulkResource,bulkBean,authenticationFilter,ClearThreadLocalInterceptor,cxf.config0]; root of factory hierarchy 
-TID: [-1234] [] [2019-01-11 14:44:48,382]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /Users 
-TID: [-1234] [] [2019-01-11 14:44:48,429]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /Groups 
-TID: [-1234] [] [2019-01-11 14:44:48,430]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /Bulk 
-TID: [-1234] [] [2019-01-11 14:44:48,457]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/wso2].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/webapps/wso2.war] 
-TID: [-1234] [] [2019-01-11 14:44:49,143]  INFO {JAGGERY.app:js} -  server url was not found under jaggery.conf file. Therefore connecting to the services same as the deployed carbon server 
-TID: [-1234] [] [2019-01-11 14:44:49,145]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/dashboard].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/jaggeryapps/dashboard] 
-TID: [-1234] [] [2019-01-11 14:44:49,176]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal].File[/Users/marcosmartinezhernandez/Documents/GitHub/wso2ApiMAndIS/wso2is-5.2.0/repository/deployment/server/jaggeryapps/portal] 
-TID: [-1234] [] [2019-01-11 14:44:49,187]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
-TID: [-1234] [] [2019-01-11 14:44:49,209]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
-TID: [-1234] [] [2019-01-11 14:44:49,254]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11112/jndi/rmi://localhost:10000/jmxrmi 
-TID: [-1234] [] [2019-01-11 14:44:49,254]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Identity Server-5.2.0 
-TID: [-1234] [] [2019-01-11 14:44:49,255]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 29 sec 
-TID: [-1234] [] [2019-01-11 14:44:49,718]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://localhost:9444/carbon/ 
-TID: [-1234] [] [2019-01-11 14:44:49,733]  INFO {org.wso2.carbon.identity.authenticator.x509Certificate.internal.X509CertificateServiceComponent} -  X509 Certificate Servlet activated successfully.. 
-TID: [-1234] [] [2019-01-11 14:45:17,280]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-11 14:45:17,280+0100] 
-TID: [-1] [] [2019-01-11 14:46:47,840]  INFO {org.wso2.carbon.bpel.core.internal.BPELServiceComponent} -  Shutting down BPEL Server........ 
-TID: [-1234] [] [2019-01-11 14:46:47,840]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... 
-TID: [-1234] [] [2019-01-11 14:46:47,842]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Identity Server... 
-TID: [-1] [] [2019-01-11 14:46:47,842]  INFO {org.apache.ode.bpel.engine.BpelServerImpl} -  BPEL Server Stopped. 
-TID: [-1234] [] [2019-01-11 14:46:47,844]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... 
-TID: [-1] [] [2019-01-11 14:46:47,845]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  BPEL Server shutdown completed. 
-TID: [-1234] [] [2019-01-11 14:46:47,845]  INFO {org.wso2.carbon.core.ServerManagement} -  Stopped all transport listeners 
-TID: [-1234] [] [2019-01-11 14:46:47,846]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for request service completion... 
-TID: [-1234] [] [2019-01-11 14:46:47,849]  INFO {org.wso2.carbon.core.ServerManagement} -  All requests have been served. 
-TID: [-1234] [] [2019-01-11 14:46:47,849]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for deployment completion... 
-TID: [-1234] [] [2019-01-11 14:46:47,863]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/STRATOS_ROOT] 
-TID: [-1234] [] [2019-01-11 14:46:47,895]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig] 
-TID: [-1234] [] [2019-01-11 14:46:47,903]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Fri Jan 11 14:44:47 CET 2019]; root of context hierarchy 
-TID: [-1234] [] [2019-01-11 14:46:47,907]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@53041333: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,userResource,userBean,groupResource,groupBean,bulkResource,bulkBean,authenticationFilter,ClearThreadLocalInterceptor,cxf.config0]; root of factory hierarchy 
-TID: [-1234] [] [2019-01-11 14:46:47,915]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/wso2] 
-TID: [-1234] [] [2019-01-11 14:46:47,916]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Fri Jan 11 14:44:46 CET 2019]; root of context hierarchy 
-TID: [-1234] [] [2019-01-11 14:46:47,929]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/throttle/data/v1] 
-TID: [-1234] [] [2019-01-11 14:46:47,940]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/authenticationendpoint] 
-TID: [-1234] [] [2019-01-11 14:46:47,948]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/totpauthenticationendpoint] 
-TID: [-1234] [] [2019-01-11 14:46:47,956]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/emailotpauthenticationendpoint] 
-TID: [-1234] [] [2019-01-11 14:46:47,957]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Fri Jan 11 14:44:40 CET 2019]; root of context hierarchy 
-TID: [-1234] [] [2019-01-11 14:46:47,959]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@30ab1312: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,tokEP,authzEndpointBean,tokenEndpointBean,revokeEndpointBean,userinfoEndpointBean,jwksEndpointBean]; root of factory hierarchy 
-TID: [-1234] [] [2019-01-11 14:46:47,971]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/oauth2] 
-TID: [-1234] [] [2019-01-11 14:46:47,979]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/smsotpauthenticationendpoint] 
-TID: [-1234] [] [2019-01-11 14:46:47,983]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/dashboard] 
-TID: [-1234] [] [2019-01-11 14:46:47,989]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal] 
-TID: [-1234] [] [2019-01-11 14:46:47,989]  INFO {org.wso2.carbon.core.ServerManagement} -  All deployment tasks have been completed. 
-TID: [-1234] [] [2019-01-11 14:46:47,989]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for server task completion... 
-TID: [-1234] [] [2019-01-11 14:46:47,989]  INFO {org.wso2.carbon.humantask.core.HumanTaskServerShutdown} -  Shutting down human task scheduler 
-TID: [-1234] [] [2019-01-11 14:46:47,990]  INFO {org.wso2.carbon.core.ServerManagement} -  All server tasks have been completed. 
-TID: [-1234] [] [2019-01-11 14:46:47,991]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down WSO2 Identity Server... 
-TID: [-1234] [] [2019-01-11 14:46:47,991]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down OSGi framework... 
-TID: [-1234] [] [2019-01-11 14:46:48,095]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-SessionData.xml 
-TID: [-1234] [] [2019-01-11 14:46:48,097]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : IsAnalytics-Publisher-wso2event-SessionData.xml, waiting for Output Event Adapter dependency : wso2event 
-TID: [-1234] [] [2019-01-11 14:46:48,097]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : IsAnalytics-Publisher-wso2event-SessionData  is in inactive state because dependency could not be found : wso2event 
-TID: [-1234] [] [2019-01-11 14:46:48,098]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-AuthenticationData.xml 
-TID: [-1234] [] [2019-01-11 14:46:48,098]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : IsAnalytics-Publisher-wso2event-AuthenticationData.xml, waiting for Output Event Adapter dependency : wso2event 
-TID: [-1234] [] [2019-01-11 14:46:48,098]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : IsAnalytics-Publisher-wso2event-AuthenticationData  is in inactive state because dependency could not be found : wso2event 
-TID: [-1234] [] [2019-01-11 14:46:48,108]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Stopping CarbonServerManager... 
-TID: [-1234] [] [2019-01-11 14:46:50,494]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} -  Stopping the carbon web-app registered under : / 
-TID: [-1234] [] [2019-01-11 14:46:50,521]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JMX reporter for Metrics 
-TID: [-1234] [] [2019-01-11 14:46:50,521]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JDBC reporter for Metrics 
-TID: [-1234] [] [2019-01-11 14:46:50,542]  INFO {org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent} -  org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent.deactivate 
-TID: [-1234] [] [2019-01-11 14:46:50,851]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete 
-TID: [-1234] [] [2019-01-11 14:46:50,851]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM 
+TID: [-1] [] [2019-01-13 02:19:01,492]  INFO {org.wso2.carbon.identity.application.authentication.framework.store.OperationCleanUpService} -  Session Operation Data cleanup task is running successfully for removing expired Operation Data 
+TID: [-1] [] [2019-01-13 04:04:01,509]  INFO {org.wso2.carbon.identity.application.authentication.framework.store.SessionCleanUpService} -  Session Data cleanup task is running successfully for removing expired Data 
+TID: [-1] [] [2019-01-13 14:19:01,644]  INFO {org.wso2.carbon.identity.application.authentication.framework.store.OperationCleanUpService} -  Session Operation Data cleanup task is running successfully for removing expired Operation Data 
+TID: [-1234] [] [2019-01-13 18:19:37,724] ERROR {org.wso2.carbon.user.core.common.AbstractUserStoreManager} -  org.wso2.carbon.user.core.UserStoreException: Authentication Failure 
+TID: [-1234] [] [2019-01-13 18:19:37,725]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:19:37,725+0100] 
+TID: [-1234] [] [2019-01-13 18:19:50,823] ERROR {org.wso2.carbon.user.core.common.AbstractUserStoreManager} -  org.wso2.carbon.user.core.UserStoreException: Authentication Failure 
+TID: [-1234] [] [2019-01-13 18:19:50,824]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:19:50,823+0100] 
+TID: [-1234] [] [2019-01-13 18:20:02,365] ERROR {org.wso2.carbon.user.core.common.AbstractUserStoreManager} -  org.wso2.carbon.user.core.UserStoreException: Authentication Failure 
+TID: [-1234] [] [2019-01-13 18:20:02,366]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:20:02,366+0100] 
+TID: [-1234] [] [2019-01-13 18:20:29,682] ERROR {org.wso2.carbon.user.core.common.AbstractUserStoreManager} -  org.wso2.carbon.user.core.UserStoreException: Authentication Failure 
+TID: [-1234] [] [2019-01-13 18:20:29,682]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:20:29,682+0100] 
+TID: [-1234] [] [2019-01-13 18:20:37,426] ERROR {org.wso2.carbon.user.core.common.AbstractUserStoreManager} -  org.wso2.carbon.user.core.UserStoreException: Authentication Failure 
+TID: [-1234] [] [2019-01-13 18:20:37,427]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:20:37,427+0100] 
+TID: [-1234] [] [2019-01-13 18:21:00,019] ERROR {org.wso2.carbon.user.core.common.AbstractUserStoreManager} -  org.wso2.carbon.user.core.UserStoreException: Authentication Failure 
+TID: [-1234] [] [2019-01-13 18:21:00,019]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:21:00,019+0100] 
+TID: [-1234] [] [2019-01-13 18:21:16,549]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... 
+TID: [-1] [] [2019-01-13 18:21:16,549]  INFO {org.wso2.carbon.bpel.core.internal.BPELServiceComponent} -  Shutting down BPEL Server........ 
+TID: [-1234] [] [2019-01-13 18:21:16,550]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Identity Server... 
+TID: [-1] [] [2019-01-13 18:21:16,550]  INFO {org.apache.ode.bpel.engine.BpelServerImpl} -  BPEL Server Stopped. 
+TID: [-1234] [] [2019-01-13 18:21:16,552]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... 
+TID: [-1] [] [2019-01-13 18:21:16,553]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  BPEL Server shutdown completed. 
+TID: [-1234] [] [2019-01-13 18:21:16,553]  INFO {org.wso2.carbon.core.ServerManagement} -  Stopped all transport listeners 
+TID: [-1234] [] [2019-01-13 18:21:16,553]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for request service completion... 
+TID: [-1234] [] [2019-01-13 18:21:16,556]  INFO {org.wso2.carbon.core.ServerManagement} -  All requests have been served. 
+TID: [-1234] [] [2019-01-13 18:21:16,556]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for deployment completion... 
+TID: [-1234] [] [2019-01-13 18:21:16,575]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/STRATOS_ROOT] 
+TID: [-1234] [] [2019-01-13 18:21:16,597]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/emailotpauthenticationendpoint] 
+TID: [-1234] [] [2019-01-13 18:21:16,633]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/smsotpauthenticationendpoint] 
+TID: [-1234] [] [2019-01-13 18:21:16,664]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/authenticationendpoint] 
+TID: [-1234] [] [2019-01-13 18:21:16,718]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig] 
+TID: [-1234] [] [2019-01-13 18:21:16,720]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Sat Jan 12 23:19:05 CET 2019]; root of context hierarchy 
+TID: [-1234] [] [2019-01-13 18:21:16,724]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@cbc11aa: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,tokEP,authzEndpointBean,tokenEndpointBean,revokeEndpointBean,userinfoEndpointBean,jwksEndpointBean]; root of factory hierarchy 
+TID: [-1234] [] [2019-01-13 18:21:16,742]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/oauth2] 
+TID: [-1234] [] [2019-01-13 18:21:16,743]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Sat Jan 12 23:19:11 CET 2019]; root of context hierarchy 
+TID: [-1234] [] [2019-01-13 18:21:16,746]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@56b11960: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,userResource,userBean,groupResource,groupBean,bulkResource,bulkBean,authenticationFilter,ClearThreadLocalInterceptor,cxf.config0]; root of factory hierarchy 
+TID: [-1234] [] [2019-01-13 18:21:16,756]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/wso2] 
+TID: [-1234] [] [2019-01-13 18:21:16,773]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/totpauthenticationendpoint] 
+TID: [-1234] [] [2019-01-13 18:21:16,774]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Sat Jan 12 23:19:09 CET 2019]; root of context hierarchy 
+TID: [-1234] [] [2019-01-13 18:21:16,817]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/throttle/data/v1] 
+TID: [-1234] [] [2019-01-13 18:21:16,822]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/dashboard] 
+TID: [-1234] [] [2019-01-13 18:21:16,826]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal] 
+TID: [-1234] [] [2019-01-13 18:21:16,826]  INFO {org.wso2.carbon.core.ServerManagement} -  All deployment tasks have been completed. 
+TID: [-1234] [] [2019-01-13 18:21:16,826]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for server task completion... 
+TID: [-1234] [] [2019-01-13 18:21:16,826]  INFO {org.wso2.carbon.humantask.core.HumanTaskServerShutdown} -  Shutting down human task scheduler 
+TID: [-1234] [] [2019-01-13 18:21:16,827]  INFO {org.wso2.carbon.core.ServerManagement} -  All server tasks have been completed. 
+TID: [-1234] [] [2019-01-13 18:21:16,828]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down WSO2 Identity Server... 
+TID: [-1234] [] [2019-01-13 18:21:16,828]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down OSGi framework... 
+TID: [-1234] [] [2019-01-13 18:21:16,930]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-SessionData.xml 
+TID: [-1234] [] [2019-01-13 18:21:16,933]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : IsAnalytics-Publisher-wso2event-SessionData.xml, waiting for Output Event Adapter dependency : wso2event 
+TID: [-1234] [] [2019-01-13 18:21:16,933]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : IsAnalytics-Publisher-wso2event-SessionData  is in inactive state because dependency could not be found : wso2event 
+TID: [-1234] [] [2019-01-13 18:21:16,933]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-AuthenticationData.xml 
+TID: [-1234] [] [2019-01-13 18:21:16,934]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state : IsAnalytics-Publisher-wso2event-AuthenticationData.xml, waiting for Output Event Adapter dependency : wso2event 
+TID: [-1234] [] [2019-01-13 18:21:16,934]  INFO {org.wso2.carbon.event.publisher.core.internal.CarbonEventPublisherService} -  Event publisher : IsAnalytics-Publisher-wso2event-AuthenticationData  is in inactive state because dependency could not be found : wso2event 
+TID: [-1234] [] [2019-01-13 18:21:16,942]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Stopping CarbonServerManager... 
+TID: [-1234] [] [2019-01-13 18:21:19,331]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} -  Stopping the carbon web-app registered under : / 
+TID: [-1234] [] [2019-01-13 18:21:19,367]  INFO {org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent} -  org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent.deactivate 
+TID: [-1234] [] [2019-01-13 18:21:19,379]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JMX reporter for Metrics 
+TID: [-1234] [] [2019-01-13 18:21:19,380]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JDBC reporter for Metrics 
+TID: [-1234] [] [2019-01-13 18:21:19,934]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete 
+TID: [-1234] [] [2019-01-13 18:21:19,934]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM 
+TID: [-1] [] [2019-01-13 18:22:05,978]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1668627309/ 
+TID: [-1] [] [2019-01-13 18:22:05,971]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1668627309/ 
+TID: [-1234] [] [2019-01-13 18:22:06,151]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... 
+TID: [-1234] [] [2019-01-13 18:22:06,152]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Mac OS X 10.14.2, x86_64 
+TID: [-1234] [] [2019-01-13 18:22:06,153]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre 
+TID: [-1234] [] [2019-01-13 18:22:06,153]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.8.0_151 
+TID: [-1234] [] [2019-01-13 18:22:06,153]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 25.151-b12,Oracle Corporation 
+TID: [-1234] [] [2019-01-13 18:22:06,153]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /Library/WSO2/wso2is-5.2.0 
+TID: [-1234] [] [2019-01-13 18:22:06,154]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /Library/WSO2/wso2is-5.2.0/tmp 
+TID: [-1234] [] [2019-01-13 18:22:06,154]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : marcosmartinezhernandez, en-US, Europe/Madrid 
+TID: [-1234] [] [2019-01-13 18:22:06,249]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Swap Memory size (MB): 1024 of the system is below the recommended minimum size :2047 
+TID: [-1234] [] [2019-01-13 18:22:06,249]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. 
+TID: [-1] [] [2019-01-13 18:22:06,408]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service 
+TID: [-1] [] [2019-01-13 18:22:06,460]  INFO {org.wso2.carbon.event.processor.manager.core.internal.util.ManagementModeConfigurationLoader} -  CEP started in Single node mode 
+TID: [-1234] [] [2019-01-13 18:22:06,817]  INFO {org.wso2.carbon.ldap.server.configuration.LDAPConfigurationBuilder} -  KDC server is disabled. 
+TID: [-1] [] [2019-01-13 18:22:08,654]  INFO {org.wso2.carbon.mex.internal.MexComponent} -  MexServiceComponent bundle activated successfully.. 
+TID: [-1234] [] [2019-01-13 18:22:09,441]  WARN {org.apache.tomcat.jdbc.pool.ConnectionPool} -  maxIdle is larger than maxActive, setting maxIdle to: 40 
+TID: [-1234] [] [2019-01-13 18:22:10,266]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 59ms 
+TID: [-1234] [] [2019-01-13 18:22:10,280]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Connected to mount at govregistry in 0ms 
+TID: [-1234] [] [2019-01-13 18:22:10,328]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Connected to mount at govregistry in 0ms 
+TID: [-1234] [] [2019-01-13 18:22:10,341]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE 
+TID: [-1] [] [2019-01-13 18:22:10,356]  INFO {org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent} -  Initialising Attachment Server 
+TID: [-1] [] [2019-01-13 18:22:10,561]  INFO {org.wso2.carbon.attachment.mgt.core.dao.impl.jpa.AbstractJPAVendorAdapter} -  [Attachment-Mgt OpenJPA] DB Dictionary: h2 
+TID: [-1] [] [2019-01-13 18:22:10,561]  INFO {org.wso2.carbon.attachment.mgt.core.dao.impl.jpa.AbstractJPAVendorAdapter} -  [Attachment-Mgt OpenJPA] Generate DDL Enabled. 
+TID: [-1] [] [2019-01-13 18:22:10,709]  INFO {org.wso2.carbon.attachment.mgt.server.internal.AttachmentServiceComponent} -  Registering AttachmentServerService 
+TID: [-1] [] [2019-01-13 18:22:10,781]  INFO {org.wso2.carbon.bpel.core.internal.BPELServiceComponent} -  Initializing BPEL Engine........ 
+TID: [-1] [] [2019-01-13 18:22:10,804]  INFO {org.apache.ode.il.EmbeddedGeronimoFactory} -  Using embedded Geronimo transaction manager 
+TID: [-1] [] [2019-01-13 18:22:10,819]  INFO {org.apache.ode.il.dbutil.Database} -  ODE using external DataSource "bpsds". 
+TID: [-1] [] [2019-01-13 18:22:10,819]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Using DAO Connection Factory class: org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl 
+TID: [-1] [] [2019-01-13 18:22:10,819]  INFO {org.apache.ode.il.dbutil.Database} -  Using DAO Connection Factory class org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl. 
+TID: [-1] [] [2019-01-13 18:22:11,251]  INFO {org.apache.ode.store.jpa.DbConfStoreConnectionFactory} -  ProcessStore initializing transaction manager using org.apache.ode.il.EmbeddedGeronimoFactory 
+TID: [-1] [] [2019-01-13 18:22:11,251]  INFO {org.apache.ode.il.EmbeddedGeronimoFactory} -  Using embedded Geronimo transaction manager 
+TID: [-1] [] [2019-01-13 18:22:11,272]  INFO {org.apache.ode.scheduler.simple.JdbcDelegate} -  Using database H2 major version 1 
+TID: [-1] [] [2019-01-13 18:22:11,272]  INFO {org.apache.ode.scheduler.simple.JdbcDelegate} -  Using database dialect: H2 
+TID: [-1] [] [2019-01-13 18:22:11,291]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering E4X Extension... 
+TID: [-1] [] [2019-01-13 18:22:11,293]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering B4P Extension... 
+TID: [-1] [] [2019-01-13 18:22:11,295]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering B4P Filter... 
+TID: [-1] [] [2019-01-13 18:22:11,299]  INFO {org.apache.ode.bpel.engine.BpelServerImpl} -  BPEL Server Started. 
+TID: [-1] [] [2019-01-13 18:22:11,299]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELServerImpl} -  Registering MBeans 
+TID: [-1] [] [2019-01-13 18:22:11,323]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  Initialising HumanTask Server 
+TID: [-1] [] [2019-01-13 18:22:11,350]  INFO {org.apache.ode.il.EmbeddedGeronimoFactory} -  Using embedded Geronimo transaction manager 
+TID: [-1] [] [2019-01-13 18:22:11,360]  INFO {org.wso2.carbon.humantask.core.dao.jpa.AbstractJPAVendorAdapter} -  [HT OpenJPA] DB Dictionary: h2 
+TID: [-1] [] [2019-01-13 18:22:11,360]  INFO {org.wso2.carbon.humantask.core.dao.jpa.AbstractJPAVendorAdapter} -  [HT OpenJPA] Generate DDL Enabled. 
+TID: [-1] [] [2019-01-13 18:22:11,379]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  Registering Axis2ConfigurationContextObserver 
+TID: [-1] [] [2019-01-13 18:22:11,383]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  Registering HT related MBeans 
+TID: [-1] [] [2019-01-13 18:22:11,386]  INFO {org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent} -  MXBean for Human tasks registered successfully 
+TID: [-1234] [] [2019-01-13 18:22:11,631]  INFO {org.wso2.carbon.metrics.impl.util.JDBCReporterBuilder} -  Creating JDBC reporter for Metrics with source 'Marcoss-MacBook-Pro.local', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period 
+TID: [-1234] [] [2019-01-13 18:22:11,631]  INFO {org.wso2.carbon.metrics.impl.util.JmxReporterBuilder} -  Creating JMX reporter for Metrics with domain 'org.wso2.carbon.metrics' 
+TID: [-1234] [] [2019-01-13 18:22:11,638]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics 
+TID: [-1234] [] [2019-01-13 18:22:11,638]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics 
+TID: [-1234] [] [2019-01-13 18:22:13,000]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} -  Default Embedded Solr Server Initialized 
+TID: [-1234] [] [2019-01-13 18:22:13,219]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. 
+TID: [-1] [] [2019-01-13 18:22:17,646]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined 
+TID: [-1234] [] [2019-01-13 18:22:18,220]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled 
+TID: [-1234] [] [2019-01-13 18:22:18,376]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
+TID: [-1234] [] [2019-01-13 18:22:18,376]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
+TID: [-1234] [] [2019-01-13 18:22:18,381]  INFO {org.wso2.carbon.bpel.deployer.BPELDeployer} -  Initializing BPEL Deployer for tenant -1234. 
+TID: [-1234] [] [2019-01-13 18:22:18,387]  INFO {org.wso2.carbon.humantask.deployer.HumanTaskDeployer} -  Initializing HumanTask Deployer for tenant -1234. 
+TID: [-1234] [] [2019-01-13 18:22:19,079]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v20 - file:/Library/WSO2/wso2is-5.2.0/repository/deployment/client/modules/addressing-1.6.1-wso2v20.mar 
+TID: [-1234] [] [2019-01-13 18:22:19,082]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart-1.6.1-wso2v22 - file:/Library/WSO2/wso2is-5.2.0/repository/deployment/client/modules/rampart-1.6.1-wso2v22.mar 
+TID: [-1234] [] [2019-01-13 18:22:20,440]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: UserInformationRecoveryService {super-tenant} 
+TID: [-1234] [] [2019-01-13 18:22:20,441]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.identity.mgt-5.2.2 -  
+TID: [-1234] [] [2019-01-13 18:22:20,814]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: mex-ut {super-tenant} 
+TID: [-1234] [] [2019-01-13 18:22:20,814]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.mex-5.1.2 -  
+TID: [-1234] [] [2019-01-13 18:22:21,071]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} -  Deploying Axis2 service: wso2carbon-sts {super-tenant} 
+TID: [-1234] [] [2019-01-13 18:22:21,090]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.sts-5.1.2 -  
+TID: [-1234] [] [2019-01-13 18:22:21,330]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /Library/WSO2/wso2is-5.2.0/repository/deployment/server/ 
+TID: [-1234] [] [2019-01-13 18:22:21,348]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  No RXTs Found. 
+TID: [-1234] [] [2019-01-13 18:22:21,348]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  Default tier policies not found in : /Library/WSO2/wso2is-5.2.0/repository/resources/default-tiers/default-tiers.xml 
+TID: [-1234] [] [2019-01-13 18:22:21,349]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  Default tier policies not found in : /Library/WSO2/wso2is-5.2.0/repository/resources/default-tiers/default-app-tiers.xml 
+TID: [-1234] [] [2019-01-13 18:22:21,349]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} -  Default tier policies not found in : /Library/WSO2/wso2is-5.2.0/repository/resources/default-tiers/default-res-tiers.xml 
+TID: [-1234] [] [2019-01-13 18:22:21,468] ERROR {org.wso2.carbon.apimgt.impl.utils.APIUtil} -  Custom sequence template location unavailable for custom sequence type in : repository/resources/customsequences/in 
+TID: [-1234] [] [2019-01-13 18:22:21,468] ERROR {org.wso2.carbon.apimgt.impl.utils.APIUtil} -  Custom sequence template location unavailable for custom sequence type out : repository/resources/customsequences/out 
+TID: [-1234] [] [2019-01-13 18:22:21,469] ERROR {org.wso2.carbon.apimgt.impl.utils.APIUtil} -  Custom sequence template location unavailable for custom sequence type fault : repository/resources/customsequences/fault 
+TID: [-1234] [] [2019-01-13 18:22:21,587]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... 
+TID: [-1234] [] [2019-01-13 18:22:21,596]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 
+TID: [-1234] [] [2019-01-13 18:22:21,753]  INFO {org.wso2.carbon.identity.oauth2.internal.OAuth2ServiceComponent} -  PKCE Support enabled. 
+TID: [-1234] [] [2019-01-13 18:22:22,045]  INFO {org.wso2.carbon.identity.sso.saml.admin.FileBasedConfigManager} -  A SSO Service Provider is registered for : wso2.my.dashboard 
+TID: [-1234] [] [2019-01-13 18:22:22,320]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9764 
+TID: [-1234] [] [2019-01-13 18:22:22,321]  INFO {org.wso2.carbon.core.transports.http.HttpsTransportListener} -  HTTPS port       : 9444 
+TID: [-1234] [] [2019-01-13 18:22:22,322]  INFO {org.wso2.carbon.bpel.core.ode.integration.BPELSchedulerInitializer} -  Starting BPS Scheduler 
+TID: [-1234] [] [2019-01-13 18:22:22,328]  INFO {openjpa.Runtime} -  Starting OpenJPA 2.2.0-wso2v1 
+TID: [-1234] [] [2019-01-13 18:22:22,403]  INFO {openjpa.jdbc.JDBC} -  Using dictionary class "org.apache.openjpa.jdbc.sql.H2Dictionary" (H2 1.3.175 (2014-01-18) ,H2 JDBC Driver 1.3.175 (2014-01-18)). 
+TID: [-1234] [] [2019-01-13 18:22:22,552]  INFO {org.wso2.carbon.humantask.core.HumanTaskSchedulerInitializer} -  Starting HumanTasks Scheduler 
+TID: [-1234] [] [2019-01-13 18:22:22,553]  INFO {openjpa.Runtime} -  Starting OpenJPA 2.2.0-wso2v1 
+TID: [-1234] [] [2019-01-13 18:22:22,554]  INFO {openjpa.jdbc.JDBC} -  Using dictionary class "org.apache.openjpa.jdbc.sql.H2Dictionary". 
+TID: [-1234] [] [2019-01-13 18:22:23,092]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :IsAnalytics-Publisher-wso2event-AuthenticationData.xml, Stream validation exception : Stream org.wso2.is.analytics.stream.OverallAuthentication:1.0.0 does not exist 
+TID: [-1234] [] [2019-01-13 18:22:23,093]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher deployment held back and in inactive state :IsAnalytics-Publisher-wso2event-SessionData.xml, Stream validation exception : Stream org.wso2.is.analytics.stream.OverallSession:1.0.0 does not exist 
+TID: [-1234] [] [2019-01-13 18:22:23,130]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-AuthenticationData.xml 
+TID: [-1234] [] [2019-01-13 18:22:23,139]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:org.wso2.is.analytics.stream.OverallAuthentication:1.0.0 
+TID: [-1234] [] [2019-01-13 18:22:23,141]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : IsAnalytics-Publisher-wso2event-AuthenticationData 
+TID: [-1234] [] [2019-01-13 18:22:23,141]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : org.wso2.is.analytics.stream.OverallAuthentication:1.0.0 
+TID: [-1234] [] [2019-01-13 18:22:23,144]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher undeployed successfully : IsAnalytics-Publisher-wso2event-SessionData.xml 
+TID: [-1234] [] [2019-01-13 18:22:23,148]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:org.wso2.is.analytics.stream.OverallSession:1.0.0 
+TID: [-1234] [] [2019-01-13 18:22:23,148]  INFO {org.wso2.carbon.event.publisher.core.EventPublisherDeployer} -  Event Publisher configuration successfully deployed and in active state : IsAnalytics-Publisher-wso2event-SessionData 
+TID: [-1234] [] [2019-01-13 18:22:23,148]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : org.wso2.is.analytics.stream.OverallSession:1.0.0 
+TID: [-1234] [] [2019-01-13 18:22:23,223]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/STRATOS_ROOT].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/STRATOS_ROOT] 
+TID: [-1234] [] [2019-01-13 18:22:23,469]  INFO {org.wso2.carbon.identity.application.authentication.endpoint.util.TenantDataManager} -  EndpointConfig.properties file loaded from ./repository/conf/identity/EndpointConfig.properties 
+TID: [-1234] [] [2019-01-13 18:22:23,955]  INFO {org.apache.jasper.compiler.TldLocationsCache} -  At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+TID: [-1234] [] [2019-01-13 18:22:24,523]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/authenticationendpoint].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/authenticationendpoint.war] 
+TID: [-1234] [] [2019-01-13 18:22:24,833]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/emailotpauthenticationendpoint].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/emailotpauthenticationendpoint.war] 
+TID: [-1234] [] [2019-01-13 18:22:25,647]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Sun Jan 13 18:22:25 CET 2019]; root of context hierarchy 
+TID: [-1234] [] [2019-01-13 18:22:25,694]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2019-01-13 18:22:25,731]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/oauth2/WEB-INF/cxf-servlet.xml] 
+TID: [-1234] [] [2019-01-13 18:22:25,829]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4d495fdc: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,tokEP,authzEndpointBean,tokenEndpointBean,revokeEndpointBean,userinfoEndpointBean,jwksEndpointBean]; root of factory hierarchy 
+TID: [-1234] [] [2019-01-13 18:22:26,175]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2019-01-13 18:22:26,267]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/oauth2].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/oauth2.war] 
+TID: [-1234] [] [2019-01-13 18:22:28,621]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features/features.txt are loading. 
+TID: [-1234] [] [2019-01-13 18:22:28,634]  INFO {org.apache.shindig.common.xml.XmlUtil} -  The XML processor being used does not support secure parsing. 
+TID: [-1234] [] [2019-01-13 18:22:28,634]  INFO {org.apache.shindig.common.xml.XmlUtil} -  Document builders are being reused. 
+TID: [-1234] [] [2019-01-13 18:22:28,809]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features-extras/features.txt are loading. 
+TID: [-1234] [] [2019-01-13 18:22:28,967]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Resources from containers/default/container.js are loading. 
+TID: [-1234] [] [2019-01-13 18:22:28,967]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Container configuration containers/default/container.js is being read. 
+TID: [-1234] [] [2019-01-13 18:22:29,367]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  Using random key for OAuth2 client-side state encryption 
+TID: [-1234] [] [2019-01-13 18:22:29,367]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  OAuth2CrypterProvider constructor 
+TID: [-1234] [] [2019-01-13 18:22:29,372]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider} -  Using random key for OAuth client-side state encryption 
+TID: [-1234] [] [2019-01-13 18:22:29,372]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  A random key for OAuth client-side state encryption is being used. 
+TID: [-1234] [] [2019-01-13 18:22:29,373]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  The OAuth signing key from res://wso2carbon.pem is loading. 
+TID: [-1234] [] [2019-01-13 18:22:29,485]  INFO {org.apache.shiro.realm.AuthorizingRealm} -  No cache or cacheManager properties have been set.  Authorization cache cannot be obtained. 
+TID: [-1234] [] [2019-01-13 18:22:29,485]  INFO {org.apache.shiro.config.IniSecurityManagerFactory} -  Realms have been explicitly set on the SecurityManager instance - auto-setting of realms will not occur. 
+TID: [-1234] [] [2019-01-13 18:22:29,493]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/shindig.war] 
+TID: [-1234] [] [2019-01-13 18:22:29,803]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/smsotpauthenticationendpoint].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/smsotpauthenticationendpoint.war] 
+TID: [-1234] [] [2019-01-13 18:22:30,831]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started 
+TID: [-1234] [] [2019-01-13 18:22:30,909]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Sun Jan 13 18:22:30 CET 2019]; root of context hierarchy 
+TID: [-1234] [] [2019-01-13 18:22:30,941]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] 
+TID: [-1234] [] [2019-01-13 18:22:30,980]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2019-01-13 18:22:31,174]  INFO {org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor} -  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+TID: [-1234] [] [2019-01-13 18:22:31,396]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2019-01-13 18:22:31,449]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 618 ms 
+TID: [-1234] [] [2019-01-13 18:22:31,470]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/throttle/data/v1].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/throttle#data#v1.war] 
+TID: [-1234] [] [2019-01-13 18:22:31,658]  INFO {org.wso2.carbon.identity.application.authentication.endpoint.util.TenantDataManager} -  EndpointConfig.properties file loaded from ./repository/conf/identity/EndpointConfig.properties 
+TID: [-1234] [] [2019-01-13 18:22:31,660]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/totpauthenticationendpoint].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/totpauthenticationendpoint.war] 
+TID: [-1234] [] [2019-01-13 18:22:32,550]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Sun Jan 13 18:22:32 CET 2019]; root of context hierarchy 
+TID: [-1234] [] [2019-01-13 18:22:32,590]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2019-01-13 18:22:32,618]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/wso2/WEB-INF/cxf-servlet.xml] 
+TID: [-1234] [] [2019-01-13 18:22:32,695]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@45615db: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,userResource,userBean,groupResource,groupBean,bulkResource,bulkBean,authenticationFilter,ClearThreadLocalInterceptor,cxf.config0]; root of factory hierarchy 
+TID: [-1234] [] [2019-01-13 18:22:32,964]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /Users 
+TID: [-1234] [] [2019-01-13 18:22:33,014]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /Groups 
+TID: [-1234] [] [2019-01-13 18:22:33,016]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be /Bulk 
+TID: [-1234] [] [2019-01-13 18:22:33,043]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/wso2].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/webapps/wso2.war] 
+TID: [-1234] [] [2019-01-13 18:22:33,768]  INFO {JAGGERY.app:js} -  server url was not found under jaggery.conf file. Therefore connecting to the services same as the deployed carbon server 
+TID: [-1234] [] [2019-01-13 18:22:33,770]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/dashboard].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/jaggeryapps/dashboard] 
+TID: [-1234] [] [2019-01-13 18:22:33,800]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal].File[/Library/WSO2/wso2is-5.2.0/repository/deployment/server/jaggeryapps/portal] 
+TID: [-1234] [] [2019-01-13 18:22:33,809]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
+TID: [-1234] [] [2019-01-13 18:22:33,838]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
+TID: [-1234] [] [2019-01-13 18:22:33,884]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11112/jndi/rmi://localhost:10000/jmxrmi 
+TID: [-1234] [] [2019-01-13 18:22:33,884]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Identity Server-5.2.0 
+TID: [-1234] [] [2019-01-13 18:22:33,885]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 30 sec 
+TID: [-1234] [] [2019-01-13 18:22:34,443]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://localhost:9444/carbon/ 
+TID: [-1234] [] [2019-01-13 18:22:34,468]  INFO {org.wso2.carbon.identity.authenticator.x509Certificate.internal.X509CertificateServiceComponent} -  X509 Certificate Servlet activated successfully.. 
+TID: [-1] [] [2019-01-13 18:22:37,009]  INFO {org.wso2.carbon.identity.entitlement.internal.SchemaBuilder} -  XACML policy schema loaded successfully. 
+TID: [-1234] [] [2019-01-13 18:24:37,982]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-13 18:24:37,981+0100] 
+TID: [-1234] [] [2019-01-13 18:24:44,833]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:24:44,833+0100] 
+TID: [-1234] [] [2019-01-13 18:24:52,982]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-13 18:24:52,982+0100] 
+TID: [-1234] [] [2019-01-13 18:25:23,103]  WARN {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  Failed Administrator login attempt 'admin[-1234]' at [2019-01-13 18:25:23,103+0100] 
+TID: [-1234] [] [2019-01-13 18:25:28,963]  INFO {org.wso2.carbon.core.services.util.CarbonAuthenticationUtil} -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-13 18:25:28,963+0100] 

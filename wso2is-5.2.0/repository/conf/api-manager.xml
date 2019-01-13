@@ -9,7 +9,7 @@
 
     <!-- This parameter is used to enable the securevault support when try to publish endpoint secured APIs. Values should be "true" or "false".
     By default secure vault is disabled.-->
-    <EnableSecureVault>false</EnableSecureVault>
+    <EnableSecureVault>None</EnableSecureVault>
 
     <!-- Authentication manager configuration for API publisher and API store. This is
          a required configuration for both web applications as their user authentication
@@ -220,7 +220,7 @@
         <ThriftClientConnectionTimeOut>10000</ThriftClientConnectionTimeOut>
         <!--ThriftClientPort>10397</ThriftClientPort-->
 
-        <EnableThriftServer>true</EnableThriftServer>
+        <EnableThriftServer>false</EnableThriftServer>
         <ThriftServerHost>localhost</ThriftServerHost>
         <!--ThriftServerPort>10397</ThriftServerPort-->
 

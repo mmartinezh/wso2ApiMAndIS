@@ -1,0 +1,25 @@
+[2019-01-12 23:21:12,156]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"created","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"PizzaShackAPI\",\"context\":\"\\\/pizzashack\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:21:12,414]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"PizzaShackAPI\",\"context\":\"\\\/pizzashack\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:21:12,495]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:12,495+0100] 
+[2019-01-12 23:21:12,866]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"PizzaShackAPI\",\"context\":\"\\\/pizzashack\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:21:12,901]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:12,900+0100] 
+[2019-01-12 23:21:13,532]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"PizzaShackAPI\",\"context\":\"\\\/pizzashack\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:21:13,558]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:13,557+0100] 
+[2019-01-12 23:21:13,694]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:21:13,693+0100] 
+[2019-01-12 23:22:50,300]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"created","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"context\":\"\\\/test\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:22:50,911]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"context\":\"\\\/test\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:22:50,938]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:22:50,937+0100] 
+[2019-01-12 23:23:41,874]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"context\":\"\\\/test\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:23:41,904]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:23:41,904+0100] 
+[2019-01-12 23:24:36,856]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"context\":\"\\\/test\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:24:36,891]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:24:36,891+0100] 
+[2019-01-12 23:24:37,005]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:24:37,005+0100] 
+[2019-01-12 23:26:06,903]  INFO -  {"performedBy":"WSO2.ORG\/testUser","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"context\":\"\\\/test\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:26:06,930]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:26:06,930+0100] 
+[2019-01-12 23:26:07,042]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:26:07,042+0100] 
+[2019-01-12 23:26:07,181]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:26:07,181+0100] 
+[2019-01-12 23:26:14,410]  INFO -  {"performedBy":"WSO2.ORG\/testUser","action":"updated","typ":"API","info":"{\"provider\":\"WSO2.ORG\\\/admin\",\"name\":\"test\",\"context\":\"\\\/test\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-01-12 23:26:14,434]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:26:14,434+0100] 
+[2019-01-12 23:26:14,483]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:26:14,483+0100] 
+[2019-01-12 23:26:14,643]  INFO -  'WSO2.ORG/admin@carbon.super [-1234]' logged in at [2019-01-12 23:26:14,643+0100] 
+[2019-01-12 23:27:23,764]  INFO -  {"performedBy":"WSO2.ORG\/admin","action":"created","typ":"Subscription","info":"{\"application_name\":\"DefaultApplication\",\"tier\":\"Unlimited\",\"provider\":\"WSO2.ORG\\\/admin\",\"api_name\":\"PizzaShackAPI\",\"application_id\":1}"} 
